@@ -1,0 +1,105 @@
+<!-- ALUNOS - 523 -->
+<!-- Felipe Gabriel Araújo de Freitas -->
+<!-- Matheus Ramos Lima da Silva -->
+<!-- Paulo Lázaro da Rocha Souza -->
+    
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/trio_devs_favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>TRIO DEVS</title>
+    
+    
+</head>
+<body>
+
+
+<noscript>
+    <div id="noscript">
+        Atenção! Este site precisa do JavaScript ativado para funcionar corretamente. <br>
+        Ative o JavaScript no seu navegador, ou acesse com um navegador que tenha suporte!
+    </div>
+</noscript>
+
+<div id="pagina" style="width: 95%;">
+
+
+    <!-- CABEÇALHO -->
+    <div id="cabecalho" class="cabecalho-rodape">
+
+        <h1 id="titulo-cabecalho">TRIO DEVS</h1>
+        
+    </div>
+
+
+
+    <div id="menu-conteudo">
+
+        <!-- MENU LATERAL -->
+        <div id="menu">
+
+            <button onclick="voltar_capa()">INÍCIO</button>
+
+            <h1>FELIPE</h1> <br>
+            <button onclick="conteudo_fuction('curriculo-felipe.htm', 'FELIPE')">Currículo</button>
+            <button onclick="conteudo_fuction('tema_livre-felipe.htm', 'FELIPE')">Player Tauz</button>
+
+
+            <h1>MATHEUS</h1> <br>
+            <button onclick="conteudo_fuction('curriculo-matheus.htm', 'MATHEUS')">Currículo</button>
+            <button onclick="conteudo_fuction('tema_livre-matheus.htm','MATHEUS')">Alice in Chains</button>
+
+
+            <h1>PAULO</h1> <br>
+            <button onclick="conteudo_fuction('curriculo-paulo.htm', 'PAULO')">Currículo</button>
+            <button onclick="conteudo_fuction('tema_livre-paulo.htm', 'PAULO')">Dragon Ball Z</button>
+        
+        </div>
+        
+
+
+        <!-- CONTEÚDO -->
+        <div id="conteudo">
+
+            <div id="capa">
+                <img src="./img/trio_devs.png" alt="capa trio de devs" width="auto" height="100%">
+            </div>
+            
+        </div>
+
+        <!-- script -->
+        <script>
+
+            // função para mudar o conteúdo
+            async function conteudo_fuction(arquivo, nome) {
+                document.getElementById('conteudo').innerHTML = await (await fetch(arquivo)).text()         // para puxar o arquivo no servidor, esperar e converter em texto
+                document.getElementById('titulo-cabecalho').innerHTML = nome                                // para mudar o título
+            }
+
+
+            // para voltar para a capa
+            const capa = document.getElementById('conteudo').innerHTML      // armazena
+
+            function voltar_capa() {
+                document.getElementById('conteudo').innerHTML = capa                  // escreve o conteúdo armazenado
+                document.getElementById('titulo-cabecalho').innerHTML = 'TRIO DEVS'   // muda o título tamb´me
+            }
+
+        </script>
+
+    </div>
+
+
+    <!-- RODAPÉ -->
+    <div id="rodape" class="cabecalho-rodape">
+        <h1>2026</h1>
+    </div>
+
+</div>
+    
+</body>
+</html>

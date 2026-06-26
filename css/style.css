@@ -1,0 +1,344 @@
+/* ALUNOS - 523 */
+/* Felipe Gabriel Araújo de Freitas */
+/* Matheus Ramos Lima da Silva */
+/* Paulo Lázaro da Rocha Souza */
+
+
+@charset "UTF-8";
+
+
+* {                             /* seleciona todos os elementos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;     /* muda a forma como é calculado a largura e altura ➡ incluindo o espaço interno e externo no tamanho definido*/
+
+
+    scrollbar-width: none;      /* scroll invisível*/
+}
+
+
+body, html {
+    background-color: #2f3030;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+
+#noscript {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    
+    font-size: 30pt;
+    background-color: #100E09;
+    height: 300px;
+    padding: 30px;
+}
+
+
+
+/* PÁGINA */
+#pagina {     
+    display: flex;
+    flex-direction: column;     /* direção dos elementos ➡️ um abaixo do outro*/
+    min-height: 100vh;          /* altura mínima ➡️ cresce se precisar*/
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 30px auto;          /* 30px cima/baixo e auto direita/esquerda*/
+    
+    background-color: #1c1c1c;
+
+}
+
+/*---------------------------------------*/
+
+
+
+/* CABEÇALHO E RODAPÉ */
+.cabecalho-rodape {
+    display: flex;
+    justify-content: center;    /* centraliza horizontalmente*/
+    align-items: center;        /* centraliza verticalmente*/
+
+    background-color: #100E09;
+    height: 100px;
+}
+
+
+
+/* #cabecalho {
+} */
+
+/* #rodape {
+} */
+
+
+/*---------------------------------------*/
+
+
+
+
+
+/* ___ MENU E CONTEÚDO ___ */
+#menu-conteudo {
+    display: grid;
+    grid-template-columns: 200px auto;      /* coluna 1 com 200px e coluna 2 com o restante*/
+
+    min-height: 80vh;
+}
+
+
+
+/* MENU LATERAL */
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;  /* alinha a esquerda*/
+
+    
+    background-color: #292828;
+
+    padding-left: 20px;
+    padding-top: 30px;
+}
+
+/* títulos */
+#menu h1 {
+    align-self: flex-start;     /* para o elemento ocupar apenas o seu espaço*/
+    width: 90%;
+    
+    font-size: 20pt;
+    font-weight: bold;          /* texto mais gordo ➡ negrito*/
+
+    border-bottom: 3px solid white;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}    
+
+/* botões */
+#menu button {
+    align-self: flex-start;
+
+    font-size: 17pt;
+
+    margin-bottom: 10px;
+
+    color: white;
+    font-weight: bold;
+    
+    background-color: transparent;  /* fundo transparente*/
+    border: none;                   /* remove bordas*/
+
+    cursor: pointer;                /* modifica o ponteiro do cursor*/
+}
+
+
+/*---------------------------------------*/
+
+/* ___ CONTEÚDO ___ */
+
+
+/* PÁGINA INICIAL */
+#conteudo {
+    background-color: #1c1c1c;
+}
+
+#capa {
+    text-align: center;
+    background-color: #010c16;
+    height: 100vh;
+}
+
+/*---------------------------------------*/
+
+/* CURRÍCULO-FELIPE */
+
+/* #curriculo-felipe {
+} */
+
+/* informações iniciais */
+#informacoes_iniciais {
+    display: flex;
+    flex-direction: row;
+    
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#informacoes_iniciais p {
+    margin: auto;
+    width: 75%;
+    text-align: justify;
+}
+
+
+/* tabela */
+#tabela-formacoes {
+    color: inherit;       /* herda a cor do container pai*/
+
+    border-collapse: collapse;
+
+    width: 95%;  
+    height: 50vh;
+
+    margin: auto;
+    margin-top: 30px;
+}
+
+
+#tabela-formacoes .titulo {
+    background-color:  #100E09;
+    border-bottom: 1px solid white;
+    height: 50px;
+}
+
+
+#tabela-formacoes tr {
+    text-align: center;
+    vertical-align: middle;     /* alinhamento vertical*/
+}
+
+
+/* .linha-par {
+} */
+
+.linha-impar {
+    background-color: #2e2e2e;
+}
+
+
+.bordas-separador {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+
+
+#github-felipe, #github-felipe a {
+    text-align: center;
+    
+    background-color: #100E09;
+    padding: 20px;
+    margin-top: 30px;
+
+    color: inherit;
+}
+
+/*---------------------------------------*/
+
+/* TEMA_LIVRE-FELIPE */
+
+#musica {
+    margin-top: 100px;
+}
+
+#musica #titulo, #musica #titulo a {
+    background-color: #100E09;
+
+    color: inherit;
+    text-align: center;
+    width: auto;
+    padding: 15px;
+}
+
+#letra {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    justify-content: center;
+    align-content: center;
+    gap: 100px;                             /* espaço entre os elementos*/
+
+    min-height: 100vh;
+}
+
+#letra p {
+    background-color: rgba(0, 0, 0, 0.29);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+/*---------------------------------------*/
+
+/* CURRÍCULO-MATHEUS*/
+
+#tabela-formacoes .titulo-habilidades {
+    padding: 2%;
+}
+
+#tabela-formacoes #titulo-matheus {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+/*---------------------------------------*/
+
+/* TEMA_LIVRE-MATHEUS */
+
+.secoes-matheus img {
+    width: auto;
+    height: 400px;
+}
+
+.secoes-matheus .img {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.secoes-matheus .titulos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(97, 39, 0);
+}
+
+.secoes-matheus .texto {
+    border-bottom: 1px solid rgb(97, 39, 0);
+
+    text-align: justify;
+
+    padding: 10px;
+}
+
+
+/*---------------------------------------*/
+
+/* CURRÍCULO-PAULO e TEMA_LIVRE-PAULO */
+
+.secoes-paulo .titulo {
+    border-bottom: 2.5px solid white;
+    padding-bottom: 8px;
+}
+
+.secoes-paulo .texto {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+#secao-tabela-paulo {
+    display: flex;
+    flex-direction: column;
+    
+    border: 1px solid white;
+    padding: 20px;
+}
+
+#tabela-paulo {
+    margin-top: 20px;
+    text-align: center;
+    
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+/*---------------------------------------*/
+
+
+    

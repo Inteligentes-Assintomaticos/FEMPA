@@ -27,16 +27,25 @@ a {
 }
 
 
+img {                   /* responsividade de imagem*/
+    max-width: 100%;
+    height: auto;
+}
+
+
+
 #noscript {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     
-    font-size: 30pt;
+    font-size: 2rem;                /* unidade relativa que se baseia no tamanho da fonte raiz do navegador (<html>) ➡ então mudar a fonte na raiz (<html>) muda a proporção de todos os textos*/
+
     background-color: #100E09;
-    height: 300px;
     padding: 30px;
+
+    min-height: 300px;              /* altura padrão para telas maiores ➡ permite aumentar se o conteúdo interno aumentar*/
 }
 
 
@@ -45,13 +54,12 @@ a {
 #pagina {     
     display: flex;
     flex-direction: column;     /* direção dos elementos ➡️ um abaixo do outro*/
-    min-height: 100vh;          /* altura mínima ➡️ cresce se precisar*/
+    min-height: 100vh;
     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 30px auto;          /* 30px cima/baixo e auto direita/esquerda*/
     
     background-color: #1c1c1c;
-
 }
 
 /*---------------------------------------*/
@@ -65,7 +73,7 @@ a {
     align-items: center;        /* centraliza verticalmente*/
 
     background-color: #100E09;
-    height: 100px;
+    min-height: 100px;
 }
 
 
@@ -80,17 +88,28 @@ a {
 /*---------------------------------------*/
 
 
-
-
-
 /* ___ MENU E CONTEÚDO ___ */
-#menu-conteudo {
-    display: grid;
-    grid-template-columns: 200px auto;      /* coluna 1 com 200px e coluna 2 com o restante*/
 
-    min-height: 80vh;
+/* MOBILE */
+#menu-conteudo {
+    display: flex;
+    flex-direction: column-reverse;
+
 }
 
+
+
+/* TELAS MAIORES */
+
+@media (min-width: 768px)  {
+    #menu-conteudo {
+        display: grid;
+
+        grid-template-columns: 1fr 5fr;     /* muda as proporções conforme a largura disponível*/
+
+        min-height: 80vh;
+    }
+}
 
 
 /* MENU LATERAL */
@@ -104,6 +123,7 @@ a {
 
     padding-left: 20px;
     padding-top: 30px;
+
 }
 
 /* títulos */
@@ -149,6 +169,7 @@ a {
 
 #capa {
     text-align: center;
+    align-content: center;
     background-color: #010c16;
     height: 100vh;
 }
@@ -168,6 +189,8 @@ a {
     width: 95%;
     margin: auto;
     margin-top: 30px;
+
+    align-items: flex-start;
 }
 
 #informacoes_iniciais p {

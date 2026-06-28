@@ -34,7 +34,7 @@ img {                   /* responsividade de imagem*/
 
 
 
-#noscript {
+noscript {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -91,7 +91,7 @@ img {                   /* responsividade de imagem*/
 /* ___ MENU E CONTEÚDO ___ */
 
 /* MOBILE */
-#menu-conteudo {
+main {
     display: flex;
     flex-direction: column-reverse;
 
@@ -102,7 +102,7 @@ img {                   /* responsividade de imagem*/
 /* TELAS MAIORES */
 
 @media (min-width: 768px)  {
-    #menu-conteudo {
+    main {
         display: grid;
 
         grid-template-columns: 1fr 5fr;     /* muda as proporções conforme a largura disponível*/
@@ -113,7 +113,7 @@ img {                   /* responsividade de imagem*/
 
 
 /* MENU LATERAL */
-#menu {
+nav {
     display: flex;
     flex-direction: column;
     justify-content: left;  /* alinha a esquerda*/
@@ -127,7 +127,7 @@ img {                   /* responsividade de imagem*/
 }
 
 /* títulos */
-#menu h1 {
+nav h2 {
     align-self: flex-start;     /* para o elemento ocupar apenas o seu espaço*/
     width: 90%;
     
@@ -140,7 +140,7 @@ img {                   /* responsividade de imagem*/
 }    
 
 /* botões */
-#menu button {
+nav button {
     align-self: flex-start;
 
     font-size: 17pt;
@@ -178,8 +178,6 @@ img {                   /* responsividade de imagem*/
 
 /* CURRÍCULO-FELIPE */
 
-/* #curriculo-felipe {
-} */
 
 /* informações iniciais */
 #informacoes_iniciais {
@@ -201,7 +199,7 @@ img {                   /* responsividade de imagem*/
 
 
 /* tabela */
-#tabela-formacoes {
+section#tabela-formacoes table {
     color: inherit;       /* herda a cor do container pai*/
 
     border-collapse: collapse;
@@ -214,14 +212,14 @@ img {                   /* responsividade de imagem*/
 }
 
 
-#tabela-formacoes .titulo {
+section#tabela-formacoes table .titulo {
     background-color:  #100E09;
     border-bottom: 1px solid white;
     height: 50px;
 }
 
 
-#tabela-formacoes tr {
+section#tabela-formacoes table tr {
     text-align: center;
     vertical-align: middle;     /* alinhamento vertical*/
 }
@@ -290,11 +288,11 @@ img {                   /* responsividade de imagem*/
 
 /* CURRÍCULO-MATHEUS*/
 
-#tabela-formacoes .titulo-habilidades {
+section#tabela-formacoes table .titulo-habilidades {
     padding: 2%;
 }
 
-#tabela-formacoes #titulo-matheus {
+section#tabela-formacoes table #titulo-matheus {
     padding-top: 3%;
     padding-bottom: 3%;
 }
@@ -303,25 +301,25 @@ img {                   /* responsividade de imagem*/
 
 /* TEMA_LIVRE-MATHEUS */
 
-.secoes-matheus img {
+section.matheus img {
     width: auto;
     height: 400px;
 }
 
-.secoes-matheus .img {
+section.matheus .img {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.secoes-matheus .titulos {
+section.matheus .titulos {
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: rgb(97, 39, 0);
 }
 
-.secoes-matheus .texto {
+section.matheus .texto {
     border-bottom: 1px solid rgb(97, 39, 0);
 
     text-align: justify;
@@ -334,18 +332,18 @@ img {                   /* responsividade de imagem*/
 
 /* CURRÍCULO-PAULO e TEMA_LIVRE-PAULO */
 
-.secoes-paulo .titulo {
+section.paulo .titulo {
     border-bottom: 2.5px solid white;
     padding-bottom: 8px;
 }
 
-.secoes-paulo .texto {
+section.paulo .texto {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 
-#secao-tabela-paulo {
+section#tabela-paulo {
     display: flex;
     flex-direction: column;
     
@@ -353,7 +351,7 @@ img {                   /* responsividade de imagem*/
     padding: 20px;
 }
 
-#tabela-paulo {
+table#tabela-paulo {
     margin-top: 20px;
     text-align: center;
     
@@ -364,4 +362,3 @@ img {                   /* responsividade de imagem*/
 /*---------------------------------------*/
 
 
-    

@@ -93,15 +93,14 @@ noscript {
 /* MOBILE */
 main {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse;     /* para o menu descer*/
 
 }
 
 
-
 /* TELAS MAIORES */
 
-@media (min-width: 768px)  {
+@media (min-width: 768px)  {                /* para telas maiores*/
     main {
         display: grid;
 

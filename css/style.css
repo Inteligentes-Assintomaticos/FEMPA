@@ -254,6 +254,8 @@ nav button {
     margin: auto;
     width: 80%;
     text-align: justify;
+
+    padding-right: 10px;
 }
 
 

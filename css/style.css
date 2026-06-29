@@ -426,8 +426,9 @@ nav button {
 /* TEMA_LIVRE-MATHEUS */
 
 .history-alice img {
-    width: auto;
-    height: 400px;
+    height: auto;
+    max-width: 600px;
+    width: 90%;
 }
 
 .history-alice .img {

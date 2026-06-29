@@ -7,6 +7,9 @@
 @charset "UTF-8";
 
 
+
+
+
 * {                             /* seleciona todos os elementos*/
     margin: 0;
     padding: 0;
@@ -50,6 +53,9 @@ noscript {
 
 
 
+
+
+
 /* PÁGINA */
 #pagina {     
     display: flex;
@@ -57,9 +63,10 @@ noscript {
     min-height: 100vh;
     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 30px auto;          /* 30px cima/baixo e auto direita/esquerda*/
     
     background-color: #1c1c1c;
+
+    margin: auto;
 }
 
 /*---------------------------------------*/
@@ -90,6 +97,7 @@ noscript {
 
 /* ___ MENU E CONTEÚDO ___ */
 
+
 /* MOBILE */
 main {
     display: flex;
@@ -99,8 +107,7 @@ main {
 
 
 /* TELAS MAIORES */
-
-@media (min-width: 768px)  {                /* para telas maiores*/
+@media (min-width: 768px)  {
     main {
         display: grid;
 
@@ -109,6 +116,7 @@ main {
         min-height: 80vh;
     }
 }
+
 
 
 /* MENU LATERAL */
@@ -158,14 +166,15 @@ nav button {
 
 /*---------------------------------------*/
 
+
 /* ___ CONTEÚDO ___ */
 
-
-/* PÁGINA INICIAL */
 #conteudo {
     background-color: #1c1c1c;
 }
 
+
+/* página inicial */
 #capa {
     text-align: center;
     align-content: center;
@@ -175,10 +184,10 @@ nav button {
 
 /*---------------------------------------*/
 
-/* CURRÍCULO-FELIPE */
 
+/* INFORMAÇÕES INICIAIS - TEMA LIVRE: FELIPE */
+/* INFORMAÇÕES INCIAIS - CURRÍCULO: FELIPE E MATHEUS */
 
-/* informações iniciais */
 #informacoes_iniciais {
     display: flex;
     flex-direction: row;
@@ -196,9 +205,12 @@ nav button {
     text-align: justify;
 }
 
+/*---------------------------------------*/
+
+/* TABELA: FELIPE E MATHEUS */
 
 /* tabela */
-section#tabela-formacoes table {
+#tabela-formacoes {
     color: inherit;       /* herda a cor do container pai*/
 
     border-collapse: collapse;
@@ -210,19 +222,22 @@ section#tabela-formacoes table {
     margin-top: 30px;
 }
 
-
-section#tabela-formacoes table .titulo {
+/* títulos */
+#tabela-formacoes .titulo {
     background-color:  #100E09;
     border-bottom: 1px solid white;
-    height: 50px;
+    min-height: 50px;
 }
 
-
-section#tabela-formacoes table tr {
+/* linhas */
+#tabela-formacoes tr {
     text-align: center;
     vertical-align: middle;     /* alinhamento vertical*/
 }
 
+
+
+/* cores das linhas */
 
 /* .linha-par {
 } */
@@ -232,10 +247,28 @@ section#tabela-formacoes table tr {
 }
 
 
-.bordas-separador {
+/* bordas */
+.bordas-separador {     /* utilizado nas tabelas de paulo também*/
     border-right: 1px solid white;
     border-left: 1px solid white;
 }
+
+
+
+/* tabela-matheus */
+
+#tabela-formacoes .titulo-habilidades {
+    padding: 2%;
+}
+
+#tabela-formacoes #titulo-matheus {
+    padding: 3%;
+}
+
+/*---------------------------------------*/
+
+
+/* CURRÍCULO-FELIPE */
 
 
 #github-felipe, #github-felipe a {
@@ -249,6 +282,7 @@ section#tabela-formacoes table tr {
 }
 
 /*---------------------------------------*/
+
 
 /* TEMA_LIVRE-FELIPE */
 
@@ -287,38 +321,34 @@ section#tabela-formacoes table tr {
 
 /* CURRÍCULO-MATHEUS*/
 
-section#tabela-formacoes table .titulo-habilidades {
-    padding: 2%;
-}
 
-section#tabela-formacoes table #titulo-matheus {
-    padding-top: 3%;
-    padding-bottom: 3%;
-}
+
+
+
+
 
 /*---------------------------------------*/
 
 /* TEMA_LIVRE-MATHEUS */
 
-section.matheus img {
+.history-alice img {
     width: auto;
     height: 400px;
 }
 
-section.matheus .img {
+.history-alice .img {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
-section.matheus .titulos {
+.history-alice .titulos {
     display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: rgb(97, 39, 0);
 }
 
-section.matheus .texto {
+.history-alice p {
     border-bottom: 1px solid rgb(97, 39, 0);
 
     text-align: justify;
@@ -329,20 +359,20 @@ section.matheus .texto {
 
 /*---------------------------------------*/
 
-/* CURRÍCULO-PAULO e TEMA_LIVRE-PAULO */
+/* CURRÍCULO-PAULO / TEMA_LIVRE-PAULO */
 
-section.paulo .titulo {
+.section-paulo .titulo {
     border-bottom: 2.5px solid white;
     padding-bottom: 8px;
 }
 
-section.paulo .texto {
+.section-paulo p {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 
-section#tabela-paulo {
+#section-tabela-paulo {
     display: flex;
     flex-direction: column;
     
@@ -350,7 +380,7 @@ section#tabela-paulo {
     padding: 20px;
 }
 
-table#tabela-paulo {
+#tabela-paulo {
     margin-top: 20px;
     text-align: center;
     
@@ -359,5 +389,4 @@ table#tabela-paulo {
 }
 
 /*---------------------------------------*/
-
 

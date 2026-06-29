@@ -68,7 +68,7 @@ noscript {
 
 
 /* PÁGINA */
-#pagina {     
+.pagina {     
     display: flex;
     flex-direction: column;     /* direção dos elementos ➡️ um abaixo do outro*/
     min-height: 100vh;
@@ -213,8 +213,10 @@ nav button {
     
     width: 95%;
     margin: 0 auto;
-    gap: 30px;
+    gap: 30px;              /* espaço entre os itens*/
     margin-top: 30px;
+
+    align-items: center;    /* deixa no centro e impede que a imagem estique*/
 }
 
 #informacoes_iniciais p {
@@ -227,7 +229,6 @@ nav button {
 /* MOBILE */
 @media (max-width: 768px) {
     #informacoes_iniciais {
-        display: flex;
         flex-direction: column;
 
         gap: 20px;
@@ -327,11 +328,13 @@ nav button {
 
 #musica #titulo, #musica #titulo a {
     background-color: #100E09;
+    
+    min-height: 70px;
+    text-align: center;
+    align-content: center;
 
     color: inherit;
-    text-align: center;
     width: auto;
-    padding: 15px;
 }
 
 #letra {
@@ -340,9 +343,13 @@ nav button {
 
     justify-content: center;
     align-content: center;
-    gap: 100px;                             /* espaço entre os elementos*/
+    gap: 50px;
 
-    min-height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    margin: 40px 0;
+    min-height: 100%;
 }
 
 #letra p {
@@ -351,6 +358,21 @@ nav button {
     border-radius: 20px;
 }
 
+
+@media (max-width: 1280px) {
+    #letra {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    #letra p {
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+    }
+}
 
 /*---------------------------------------*/
 

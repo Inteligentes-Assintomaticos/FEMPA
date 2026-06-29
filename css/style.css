@@ -212,16 +212,32 @@ nav button {
     flex-direction: row;
     
     width: 95%;
-    margin: auto;
+    margin: 0 auto;
+    gap: 30px;
     margin-top: 30px;
-
-    align-items: flex-start;
 }
 
 #informacoes_iniciais p {
     margin: auto;
-    width: 75%;
+    width: 80%;
     text-align: justify;
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    #informacoes_iniciais {
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+        align-items: center;
+        font-size: 1.3rem;
+    }
+
+    #informacoes_iniciais p{
+        width: 90%;
+    }
 }
 
 /*---------------------------------------*/

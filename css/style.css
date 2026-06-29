@@ -360,6 +360,10 @@ nav button {
 
 
 @media (max-width: 1280px) {
+    #tauz #informacoes_iniciais {
+        flex-direction: column;
+    }
+    
     #letra {
         display: flex;
         flex-direction: column;

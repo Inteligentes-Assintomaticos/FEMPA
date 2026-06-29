@@ -92,9 +92,9 @@ noscript {
 } */
 
 
-#curriculo-matheus {
-    margin-bottom: 30px;
-}
+/* #curriculo-matheus {
+
+} */
 
 
 #curriculo-paulo, #goku {
@@ -285,10 +285,14 @@ nav button {
     border-collapse: collapse;
 
     width: 95%;  
-    height: 50vh;
-
+    
     margin: auto;
     margin-top: 30px;
+}
+
+#tabela-formacoes tr,
+#tabela-formacoes th {
+    padding: 20px;
 }
 
 /* títulos */
@@ -323,16 +327,11 @@ nav button {
 }
 
 
-
-/* tabela-matheus */
-
-#tabela-formacoes .titulo-habilidades {
-    padding: 2%;
+/* section tabela */
+#tabela {
+    margin: auto 0;     /* para centralizar verticalmente a tabela*/
 }
 
-#tabela-formacoes #titulo-matheus {
-    padding: 3%;
-}
 
 /*---------------------------------------*/
 
@@ -345,7 +344,7 @@ nav button {
     
     background-color: #100E09;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: auto;
 
     color: inherit;
 }

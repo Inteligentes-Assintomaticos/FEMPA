@@ -136,27 +136,27 @@ nav {
     
     background-color: #292828;
 
-    padding-left: 20px;
     padding-top: 30px;
-
+    padding-left: 20px;
 }
 
 /* títulos */
 nav h2 {
-    align-self: flex-start;     /* para o elemento ocupar apenas o seu espaço*/
     width: 90%;
     
     font-size: 2rem;
     font-weight: bold;          /* texto mais gordo ➡ negrito*/
 
-    border-bottom: 3px solid white;
-    padding-bottom: 5px;
     margin-top: 20px;
+
+    padding-right: 25px;        /* para não "grudar" na borda*/       
+    white-space: nowrap;        /* para não quebrar linha*/
 }    
+
 
 /* botões */
 nav button {
-    align-self: flex-start;
+    align-self: flex-start;     /* para ocupar apenas o seu espaço*/
 
     font-size: 1.5rem;
 
@@ -166,9 +166,18 @@ nav button {
     font-weight: bold;
     
     background-color: transparent;  /* fundo transparente*/
-    border: none;                   /* remove bordas*/
-
+    border: none;                   /* remove as bordas*/
+    
     cursor: pointer;                /* modifica o ponteiro do cursor*/
+
+    padding-right: 25px;
+    white-space: nowrap;
+}
+
+
+.borda {
+    border-bottom: 3px solid white;
+    width: 90%;
 }
 
 

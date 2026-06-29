@@ -67,7 +67,7 @@ noscript {
 
 
 
-/* PÁGINA */
+/* PÁGINAS */
 .pagina {     
     display: flex;
     flex-direction: column;     /* direção dos elementos ➡️ um abaixo do outro*/
@@ -78,6 +78,37 @@ noscript {
     background-color: #1c1c1c;
 
     margin: auto;
+}
+
+
+#home {
+    width: 95%;
+    margin: 30px auto;
+}
+
+
+/* #curriculo-felipe {
+    
+} */
+
+
+#curriculo-matheus {
+    margin-bottom: 30px;
+}
+
+
+#curriculo-paulo, #goku {
+    margin: 0 20px 20px;
+}
+
+
+/* #tauz {
+
+} */
+
+
+#alice-in-chains {
+    margin: 20px 0;
 }
 
 /*---------------------------------------*/

@@ -23,6 +23,8 @@
 body, html {
     background-color: #2f3030;
     color: white;
+
+    overflow-x: hidden;             /* tira o scroll lateral ➡ costuma quebrar muito as páginas*/
 }
 
 

@@ -340,6 +340,8 @@ nav button {
 
 
 
+
+
 /* MOBILE */
 @media (max-width: 768px) {
 
@@ -363,6 +365,7 @@ nav button {
     }
     
 
+
     #tabela-formacoes .bordas-separador-mobile {
         border: 1px solid white;
     }
@@ -371,6 +374,7 @@ nav button {
     #tabela-formacoes .titulo-pc {
         display: none;
     }
+
 
 
 
@@ -515,6 +519,8 @@ nav button {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+
 
 
 #section-tabela-paulo {

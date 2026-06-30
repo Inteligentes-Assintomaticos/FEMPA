@@ -30,7 +30,7 @@ body, html {
 
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 768px) {        /* cria uma excessão de estilização em telas até 768px (ou outro tamanho definido)*/
     body, html {
         font-size: 12px;
     }

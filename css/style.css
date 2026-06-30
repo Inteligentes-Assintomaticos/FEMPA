@@ -284,7 +284,7 @@ nav button {
 
     border-collapse: collapse;
 
-    width: 95%;  
+    width: 90%;
     
     margin: auto;
     margin-top: 30px;
@@ -298,7 +298,6 @@ nav button {
 /* títulos */
 #tabela-formacoes .titulo {
     background-color:  #100E09;
-    border-bottom: 1px solid white;
     min-height: 50px;
 }
 
@@ -329,7 +328,46 @@ nav button {
 
 /* section tabela */
 #tabela {
-    margin: auto 0;     /* para centralizar verticalmente a tabela*/
+    margin: 30px auto;     /* para centralizar verticalmente a tabela*/
+    width: 100%;
+}
+
+
+#titulo-mobile {    /* telas maiores*/
+    display: none;
+}
+
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    #tabela-formacoes,
+    #tabela-formacoes tr,
+    #tabela-formacoes th,
+    #tabela-formacoes td {
+        display: block;     /* faz com que empilhem*/
+        width: 100%;
+        border: none;
+    }
+
+    #tabela {
+        margin: 30px auto;       /* centralizar tabela*/
+    }
+
+
+    #tabela-formacoes .bordas-separador-mobile {
+        border: 1px solid white;
+    }
+
+
+    #tabela-formacoes .titulo-pc {
+        display: none;
+    }
+
+    #tabela-formacoes .titulo-mobile{
+        display: block;
+    }
 }
 
 

@@ -549,7 +549,8 @@ nav button {
 @media (max-width: 768px) {
     
     #tabela-paulo,
-    #tabela-paulo td {
+    #tabela-paulo td,
+    #tabela-paulo tr {
         display: flex;
         flex-direction: column;
 
@@ -559,6 +560,7 @@ nav button {
     #tabela-paulo td {
         padding: 10px;
     }
+
     
     #foto-perfil {
         text-align: center;

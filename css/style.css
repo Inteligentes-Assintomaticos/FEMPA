@@ -17,6 +17,7 @@
 
 
     scrollbar-width: none;      /* scroll invisível*/
+
 }
 
 
@@ -285,9 +286,7 @@ nav button {
     border-collapse: collapse;
 
     width: 90%;
-    
-    margin: auto;
-    margin-top: 30px;
+    margin: 30px auto;
 }
 
 #tabela-formacoes tr,
@@ -330,6 +329,8 @@ nav button {
 #tabela {
     margin: 30px auto;     /* para centralizar verticalmente a tabela*/
     width: 100%;
+
+    padding: 0 15px;        /* para não grudar nas bordas*/
 }
 
 
@@ -345,16 +346,22 @@ nav button {
     #tabela-formacoes,
     #tabela-formacoes tr,
     #tabela-formacoes th,
-    #tabela-formacoes td {
-        display: block;     /* faz com que empilhem*/
+    #tabela-formacoes td,
+    #tabela-formacoes .titulo-mobile {
+
+        display: flex;
+        flex-direction: column;
+        
         width: 100%;
         border: none;
     }
 
-    #tabela {
-        margin: 30px auto;       /* centralizar tabela*/
-    }
 
+    #tabela-formacoes td,
+    #tabela-formacoes th {
+        margin-bottom: 10px;
+    }
+    
 
     #tabela-formacoes .bordas-separador-mobile {
         border: 1px solid white;
@@ -365,9 +372,15 @@ nav button {
         display: none;
     }
 
-    #tabela-formacoes .titulo-mobile{
-        display: block;
+
+
+    #tabela-formacoes .habilidade {
+        background-color: #262626;
+        border: 0.5px solid white;
+        padding: 2px;
+        width: 100%;
     }
+
 }
 
 

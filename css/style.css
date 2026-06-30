@@ -539,5 +539,32 @@ nav button {
     border-collapse: collapse;
 }
 
+
+.section-paulo a {
+    overflow-wrap: break-word;
+}
+
+
+
+@media (max-width: 768px) {
+    
+    #tabela-paulo,
+    #tabela-paulo td {
+        display: flex;
+        flex-direction: column;
+
+        border: 1px solid white;
+    }
+
+    #tabela-paulo td {
+        padding: 10px;
+    }
+    
+    #foto-perfil {
+        text-align: center;
+    }
+    
+}
+
 /*---------------------------------------*/
 

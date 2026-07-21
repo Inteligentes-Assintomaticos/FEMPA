@@ -15,7 +15,7 @@
 }
 
 body, html {
-    background-color: #2f3030;
+    background-color: #0e2444;
     color: white;
 
     overflow-x: hidden;             /* tira o scroll lateral ➡ costuma quebrar muito as páginas*/
@@ -46,7 +46,7 @@ noscript {
     
     font-size: 2rem;                /* unidade relativa que se baseia no tamanho da fonte raiz do navegador (<html>) ➡ então mudar a fonte na raiz (<html>) muda a proporção de todos os textos*/
 
-    background-color: #100E09;
+    background-color: #e10cfd;
     padding: 30px;
 
     min-height: 300px;              /* altura padrão para telas maiores ➡ permite aumentar se o conteúdo interno aumentar*/

@@ -1,14 +1,9 @@
-/* ATV06 - 523 */
+/* ATV07 - 523 */
 /* Felipe Gabriel Araújo de Freitas */
 /* Matheus Ramos Lima da Silva */
 /* Paulo Lázaro da Rocha Souza */
 
-
 @charset "UTF-8";
-
-
-
-
 
 * {                             /* seleciona todos os elementos*/
     margin: 0;
@@ -19,7 +14,6 @@
     scrollbar-width: none;      /* scroll invisível*/
 }
 
-
 body, html {
     background-color: #2f3030;
     color: white;
@@ -28,25 +22,22 @@ body, html {
 }
 
 
-/* MOBILE */
+/* ===== MOBILE ===== */
+
 @media (max-width: 768px) {        /* cria uma excessão de estilização em telas até 768px (ou outro tamanho definido)*/
     body, html {
         font-size: 12px;
     }
 }
 
-
 a {
     color: white;
 }
-
 
 img {                   /* responsividade de imagem*/
     max-width: 100%;
     height: auto;
 }
-
-
 
 noscript {
     display: flex;
@@ -63,11 +54,7 @@ noscript {
 }
 
 
-
-
-
-
-/* PÁGINAS */
+/* ===== PÁGINAS ===== */
 .pagina {     
     display: flex;
     flex-direction: column;     /* direção dos elementos ➡️ um abaixo do outro*/
@@ -80,31 +67,14 @@ noscript {
     margin: auto;
 }
 
-
 #home {
     width: 95%;
     margin: 30px auto;
 }
 
-
-/* #curriculo-felipe {
-    
-} */
-
-
-/* #curriculo-matheus {
-
-} */
-
-
 #curriculo-paulo, #goku {
     margin: 0 20px 20px;
 }
-
-
-/* #tauz {
-
-} */
 
 
 #alice-in-chains {
@@ -114,8 +84,7 @@ noscript {
 /*---------------------------------------*/
 
 
-
-/* CABEÇALHO E RODAPÉ */
+/* ===== CABEÇALHO E RODAPÉ ===== */
 .cabecalho-rodape {
     display: flex;
     justify-content: center;    /* centraliza horizontalmente*/
@@ -125,20 +94,10 @@ noscript {
     min-height: 100px;
 }
 
-
-
-/* #cabecalho {
-} */
-
-/* #rodape {
-} */
-
-
 /*---------------------------------------*/
 
 
-/* ___ MENU E CONTEÚDO ___ */
-
+/* ===== MENU E CONTEÚDO ===== */
 
 main {
     display: grid;
@@ -149,8 +108,7 @@ main {
 }
 
 
-
-/* MOBILE */
+/* ===== MOBILE ===== */
 @media (max-width: 768px)  {
     main {
         display: flex;
@@ -159,8 +117,7 @@ main {
 }
 
 
-
-/* MENU LATERAL */
+/* ===== MENU LATERAL ===== */
 nav {
     display: flex;
     flex-direction: column;
@@ -178,14 +135,13 @@ nav h2 {
     width: 90%;
     
     font-size: 2rem;
-    font-weight: bold;          /* texto mais gordo ➡ negrito*/
+    font-weight: bold;          /* texto mais gordo (PRECONCEITO DA PARTE DE FELIPE) ➡ negrito*/
 
     margin-top: 20px;
 
     padding-right: 25px;        /* para não "grudar" na borda*/       
     white-space: nowrap;        /* para não quebrar linha*/
 }    
-
 
 /* botões */
 nav button {
@@ -207,22 +163,19 @@ nav button {
     white-space: nowrap;
 }
 
-
+/* Bordinha */
 .borda {
     border-bottom: 3px solid white;
     width: 90%;
 }
 
-
 /*---------------------------------------*/
 
-
-/* ___ CONTEÚDO ___ */
+/* ===== CONTEÚDO ===== */
 
 #conteudo {
     background-color: #1c1c1c;
 }
-
 
 /* página inicial */
 #capa {
@@ -234,9 +187,8 @@ nav button {
 
 /*---------------------------------------*/
 
-
-/* INFORMAÇÕES INICIAIS - TEMA LIVRE: FELIPE */
-/* INFORMAÇÕES INCIAIS - CURRÍCULO: FELIPE E MATHEUS */
+/* ===== INFORMAÇÕES INICIAIS - TEMA LIVRE: FELIPE ===== */
+/* ===== INFORMAÇÕES INCIAIS - CURRÍCULO: FELIPE E MATHEUS ===== */
 
 #informacoes_iniciais {
     display: flex;
@@ -258,8 +210,7 @@ nav button {
     padding-right: 10px;
 }
 
-
-/* MOBILE */
+/* +++++ MOBILE +++++ */
 @media (max-width: 768px) {
     #informacoes_iniciais {
         flex-direction: column;
@@ -276,7 +227,7 @@ nav button {
 
 /*---------------------------------------*/
 
-/* TABELA: FELIPE E MATHEUS */
+/* ====== TABELA: FELIPE E MATHEUS ===== */
 
 /* tabela */
 #tabela-formacoes {
@@ -305,24 +256,16 @@ nav button {
     vertical-align: middle;     /* alinhamento vertical*/
 }
 
-
-
 /* cores das linhas */
-
-/* .linha-par {
-} */
-
 .linha-impar {
     background-color: #2e2e2e;
 }
-
 
 /* bordas */
 .bordas-separador {     /* utilizado nas tabelas de paulo também*/
     border-right: 1px solid white;
     border-left: 1px solid white;
 }
-
 
 /* section tabela */
 #tabela {
@@ -332,16 +275,12 @@ nav button {
     padding: 0 15px;        /* para não grudar nas bordas*/
 }
 
-
 #titulo-mobile {    /* telas maiores*/
     display: none;
 }
 
 
-
-
-
-/* MOBILE */
+/* +++++ MOBILE +++++ */
 @media (max-width: 768px) {
 
     #tabela-formacoes,
@@ -364,7 +303,6 @@ nav button {
     }
     
 
-
     #tabela-formacoes .bordas-separador-mobile {
         border: 1px solid white;
     }
@@ -373,8 +311,6 @@ nav button {
     #tabela-formacoes .titulo-pc {
         display: none;
     }
-
-
 
 
     #tabela-formacoes .habilidade {
@@ -386,12 +322,10 @@ nav button {
 
 }
 
-
 /*---------------------------------------*/
 
 
-/* CURRÍCULO-FELIPE */
-
+/* ===== CURRÍCULO-FELIPE ===== */
 
 #github-felipe, #github-felipe a {
     text-align: center;
@@ -464,19 +398,13 @@ nav button {
     }
 }
 
-/*---------------------------------------*/
+/*--------------------------------------|*/
+/*                                      |*/
+/* ,,,,, CURRÍCULO-MATHEUS ,,,,,        |*/
+/*                                      |*/
+/*--------------------------------------|*/
 
-/* CURRÍCULO-MATHEUS*/
-
-
-
-
-
-
-
-/*---------------------------------------*/
-
-/* TEMA_LIVRE-MATHEUS */
+/* ===== TEMA_LIVRE-MATHEUS ===== */
 
 .history-alice img {
     height: auto;
@@ -504,10 +432,9 @@ nav button {
     padding: 10px;
 }
 
-
 /*---------------------------------------*/
 
-/* CURRÍCULO-PAULO / TEMA_LIVRE-PAULO */
+/* ===== CURRÍCULO-PAULO / TEMA_LIVRE-PAULO ===== */
 
 .section-paulo .titulo {
     border-bottom: 2.5px solid white;
@@ -518,9 +445,6 @@ nav button {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
-
-
 
 #section-tabela-paulo {
     display: flex;
@@ -538,12 +462,9 @@ nav button {
     border-collapse: collapse;
 }
 
-
 .section-paulo a {
     overflow-wrap: break-word;
 }
-
-
 
 @media (max-width: 768px) {
     
@@ -568,4 +489,3 @@ nav button {
 }
 
 /*---------------------------------------*/
-

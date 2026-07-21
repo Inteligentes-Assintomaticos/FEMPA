@@ -21,7 +21,6 @@ body, html {
     overflow-x: hidden;             /* tira o scroll lateral ➡ costuma quebrar muito as páginas*/
 }
 
-
 /* ===== MOBILE ===== */
 
 @media (max-width: 768px) {        /* cria uma excessão de estilização em telas até 768px (ou outro tamanho definido)*/
@@ -53,7 +52,6 @@ noscript {
     min-height: 300px;              /* altura padrão para telas maiores ➡ permite aumentar se o conteúdo interno aumentar*/
 }
 
-
 /* ===== PÁGINAS ===== */
 .pagina {     
     display: flex;
@@ -83,7 +81,6 @@ noscript {
 
 /*---------------------------------------*/
 
-
 /* ===== CABEÇALHO E RODAPÉ ===== */
 .cabecalho-rodape {
     display: flex;
@@ -95,7 +92,6 @@ noscript {
 }
 
 /*---------------------------------------*/
-
 
 /* ===== MENU E CONTEÚDO ===== */
 
@@ -324,7 +320,6 @@ nav button {
 
 /*---------------------------------------*/
 
-
 /* ===== CURRÍCULO-FELIPE ===== */
 
 #github-felipe, #github-felipe a {
@@ -339,8 +334,7 @@ nav button {
 
 /*---------------------------------------*/
 
-
-/* TEMA_LIVRE-FELIPE */
+/* ===== TEMA_LIVRE-FELIPE ===== */
 
 #musica {
     margin-top: 100px;
@@ -400,7 +394,7 @@ nav button {
 
 /*--------------------------------------|*/
 /*                                      |*/
-/* ,,,,, CURRÍCULO-MATHEUS ,,,,,        |*/
+/*        CURRÍCULO-MATHEUS             |*/
 /*                                      |*/
 /*--------------------------------------|*/
 
@@ -488,4 +482,4 @@ nav button {
     
 }
 
-/*---------------------------------------*/
+/*---------------------------------------*/ /*PIMENTA in cu of others is refresco*/

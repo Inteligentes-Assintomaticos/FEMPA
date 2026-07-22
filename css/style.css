@@ -3,7 +3,12 @@
 /* Matheus Ramos Lima da Silva */
 /* Paulo Lázaro da Rocha Souza */
 
+
 @charset "UTF-8";
+
+
+
+
 
 * {                             /* seleciona todos os elementos*/
     margin: 0;
@@ -14,6 +19,7 @@
     scrollbar-width: none;      /* scroll invisível*/
 }
 
+
 body, html {
     background-color: #0e2444;
     color: white;
@@ -21,23 +27,31 @@ body, html {
     overflow-x: hidden;             /* tira o scroll lateral ➡ costuma quebrar muito as páginas*/
 }
 
-/* ===== MOBILE ===== */
 
+/* mobile */
 @media (max-width: 768px) {        /* cria uma excessão de estilização em telas até 768px (ou outro tamanho definido)*/
+
+    /* fonte menor para tela menores */
     body, html {
         font-size: 12px;
     }
 }
 
+
+/* links */
 a {
     color: white;
 }
 
+
+/* responsividade para imagens*/
 img {                   /* responsividade de imagem*/
     max-width: 100%;
     height: auto;
 }
 
+
+/* noscript para o JS desativado */
 noscript {
     display: flex;
     flex-direction: column;
@@ -52,7 +66,15 @@ noscript {
     min-height: 300px;              /* altura padrão para telas maiores ➡ permite aumentar se o conteúdo interno aumentar*/
 }
 
-/* ===== PÁGINAS ===== */
+/*---------------------------------------*/
+
+
+/*==================================================================================*/
+/*                                  PÁGINAS                                         */
+/*==================================================================================*/
+
+
+/* classe para as páginas */
 .pagina {     
     display: flex;
     flex-direction: column;     /* direção dos elementos ➡️ um abaixo do outro*/
@@ -65,23 +87,33 @@ noscript {
     margin: auto;
 }
 
+
+/* página inicial (index) */
 #home {
     width: 95%;
     margin: 30px auto;
 }
 
+
+/* currículo de paulo e tema livre de paulo*/
 #curriculo-paulo, #goku {
     margin: 0 20px 20px;
 }
 
 
+/* tema livre de matheus*/
 #alice-in-chains {
     margin: 20px 0;
 }
 
 /*---------------------------------------*/
 
-/* ===== CABEÇALHO E RODAPÉ ===== */
+
+/*==================================================================================*/
+/*                             CABEÇALHO E RODAPÉ                                   */
+/*==================================================================================*/
+
+/* classe para cabeçalho e rodapé */
 .cabecalho-rodape {
     display: flex;
     justify-content: center;    /* centraliza horizontalmente*/
@@ -93,8 +125,13 @@ noscript {
 
 /*---------------------------------------*/
 
-/* ===== MENU E CONTEÚDO ===== */
 
+/*==================================================================================*/
+/*                                MENU E CONTEÚDO                                   */
+/*==================================================================================*/
+
+
+/* conteúdo */
 main {
     display: grid;
 
@@ -104,7 +141,7 @@ main {
 }
 
 
-/* ===== MOBILE ===== */
+/* conteúdo_mobile */
 @media (max-width: 768px)  {
     main {
         display: flex;
@@ -113,7 +150,9 @@ main {
 }
 
 
-/* ===== MENU LATERAL ===== */
+/* _____MENU LATERAL_____*/
+
+/* menu */
 nav {
     display: flex;
     flex-direction: column;
@@ -159,16 +198,16 @@ nav button {
     white-space: nowrap;
 }
 
-/* Bordinha */
+/* bordas */
 .borda {
     border-bottom: 3px solid white;
     width: 90%;
 }
 
-/*---------------------------------------*/
 
-/* ===== CONTEÚDO ===== */
+/* _____CONTEÚDO_____ */
 
+/* conteúdo */
 #conteudo {
     background-color: #1c1c1c;
 }
@@ -183,9 +222,13 @@ nav button {
 
 /*---------------------------------------*/
 
-/* ===== INFORMAÇÕES INICIAIS - TEMA LIVRE: FELIPE ===== */
-/* ===== INFORMAÇÕES INCIAIS - CURRÍCULO: FELIPE E MATHEUS ===== */
+/*==================================================================================*/
+/*                  INFORMAÇÕES INICIAIS - TEMA LIVRE: FELIPE                       */
+/*               INFORMAÇÕES INCIAIS - CURRÍCULO: FELIPE E MATHEUS                  */
+/*==================================================================================*/
 
+
+/* informações inicias --> foto e introdução */
 #informacoes_iniciais {
     display: flex;
     flex-direction: row;
@@ -198,6 +241,8 @@ nav button {
     align-items: center;    /* deixa no centro e impede que a imagem estique*/
 }
 
+
+/* parágrafos */
 #informacoes_iniciais p {
     margin: auto;
     width: 80%;
@@ -206,8 +251,10 @@ nav button {
     padding-right: 10px;
 }
 
-/* +++++ MOBILE +++++ */
+
+/* mobile */
 @media (max-width: 768px) {
+
     #informacoes_iniciais {
         flex-direction: column;
 
@@ -223,9 +270,12 @@ nav button {
 
 /*---------------------------------------*/
 
-/* ====== TABELA: FELIPE E MATHEUS ===== */
+/*==================================================================================*/
+/*                          TABELA: FELIPE E MATHEUS                                */
+/*==================================================================================*/
 
-/* tabela */
+
+/* tabela --> formações de TI */
 #tabela-formacoes {
     color: inherit;       /* herda a cor do container pai*/
 
@@ -235,16 +285,13 @@ nav button {
     margin: 30px auto;
 }
 
+
+/* linhas e colunas da tabela */
 #tabela-formacoes tr,
 #tabela-formacoes th {
     padding: 20px;
 }
 
-/* títulos */
-#tabela-formacoes .titulo {
-    background-color:  #100E09;
-    min-height: 50px;
-}
 
 /* linhas */
 #tabela-formacoes tr {
@@ -252,18 +299,28 @@ nav button {
     vertical-align: middle;     /* alinhamento vertical*/
 }
 
-/* cores das linhas */
+
+/* títulos */
+#tabela-formacoes .titulo {
+    background-color:  #100E09;
+    min-height: 50px;
+}
+
+
+/* cores das linhas --> muda a cor das linhas de forma alternada */
 .linha-impar {
     background-color: #2e2e2e;
 }
 
-/* bordas */
+
+/* bordas --> bordas separadoras */
 .bordas-separador {     /* utilizado nas tabelas de paulo também*/
     border-right: 1px solid white;
     border-left: 1px solid white;
 }
 
-/* section tabela */
+
+/* tabela --> centraliza a tabela dentro da section que está */
 #tabela {
     margin: 30px auto;     /* para centralizar verticalmente a tabela*/
     width: 100%;
@@ -271,14 +328,17 @@ nav button {
     padding: 0 15px;        /* para não grudar nas bordas*/
 }
 
-#titulo-mobile {    /* telas maiores*/
-    display: none;
+
+/* título mobile --> aparece apenas quando a tela fica menor */
+#titulo-mobile {
+    display: none;      /* permanece invisível enquanto não atingir um tamanho de tela menor */
 }
 
 
-/* +++++ MOBILE +++++ */
+/* mobile */
 @media (max-width: 768px) {
 
+    /* tabela --> nova formatação para telas menores */
     #tabela-formacoes,
     #tabela-formacoes tr,
     #tabela-formacoes th,
@@ -293,22 +353,26 @@ nav button {
     }
 
 
+    /* linhas e colunas */
     #tabela-formacoes td,
     #tabela-formacoes th {
         margin-bottom: 10px;
     }
     
 
+    /* bordas --> para o novo forato de tabela */
     #tabela-formacoes .bordas-separador-mobile {
         border: 1px solid white;
     }
 
 
+    /* título --> deixa os títulos da tabela maior invisível */
     #tabela-formacoes .titulo-pc {
         display: none;
     }
 
 
+    /* muda a formatação */
     #tabela-formacoes .habilidade {
         background-color: #262626;
         border: 0.5px solid white;
@@ -320,8 +384,12 @@ nav button {
 
 /*---------------------------------------*/
 
-/* ===== CURRÍCULO-FELIPE ===== */
+/*==================================================================================*/
+/*                              CURRÍCULO-FELIPE                                    */
+/*==================================================================================*/
 
+
+/* seção com o link do github */
 #github-felipe, #github-felipe a {
     text-align: center;
     
@@ -334,12 +402,18 @@ nav button {
 
 /*---------------------------------------*/
 
-/* ===== TEMA_LIVRE-FELIPE ===== */
+/*==================================================================================*/
+/*                              TEMA_LIVRE-FELIPE                                   */
+/*==================================================================================*/
 
+
+/* seção com a letra da música */
 #musica {
     margin-top: 100px;
 }
 
+
+/* título da seção e configuração do link */
 #musica #titulo, #musica #titulo a {
     background-color: #100E09;
     
@@ -351,6 +425,8 @@ nav button {
     width: auto;
 }
 
+
+/* seção com a letra da música */
 #letra {
     display: grid;
     grid-template-columns: auto auto;
@@ -366,6 +442,8 @@ nav button {
     min-height: 100%;
 }
 
+
+/* parágrafos */
 #letra p {
     background-color: rgba(0, 0, 0, 0.29);
     padding: 20px;
@@ -373,11 +451,16 @@ nav button {
 }
 
 
+/* mobile */
 @media (max-width: 1280px) {
+
+    /* informações inicias --> foto e introdução */
     #tauz #informacoes_iniciais {
         flex-direction: column;
     }
     
+
+    /* letra */
     #letra {
         display: flex;
         flex-direction: column;
@@ -385,6 +468,7 @@ nav button {
         align-items: center;
     }
 
+    /* parágrafos */
     #letra p {
         width: 100%;
         max-width: 600px;
@@ -392,25 +476,43 @@ nav button {
     }
 }
 
-/*--------------------------------------|*/
-/*                                      |*/
-/*        CURRÍCULO-MATHEUS             |*/
-/*                                      |*/
-/*--------------------------------------|*/
+/*---------------------------------------------*/
 
-/* ===== TEMA_LIVRE-MATHEUS ===== */
 
+/*==================================================================================*/
+/*                                  CURRÍCULO-MATHEUS                               */
+/*==================================================================================*/
+
+
+
+
+
+
+
+/*---------------------------------------------*/
+
+
+/*==================================================================================*/
+/*                              TEMA_LIVRE-MATHEUS                                  */
+/*==================================================================================*/
+
+
+/* imagens */
 .history-alice img {
     height: auto;
     max-width: 600px;
     width: 90%;
 }
 
+
+/* centralizando a imagem na seção de imagem */
 .history-alice .img {
     text-align: center;
     margin: 20px 0;
 }
 
+
+/* títulos */
 .history-alice .titulos {
     display: flex;
     flex-direction: row;
@@ -418,6 +520,8 @@ nav button {
     background-color: rgb(97, 39, 0);
 }
 
+
+/* parágrafos */
 .history-alice p {
     border-bottom: 1px solid rgb(97, 39, 0);
 
@@ -428,18 +532,26 @@ nav button {
 
 /*---------------------------------------*/
 
-/* ===== CURRÍCULO-PAULO / TEMA_LIVRE-PAULO ===== */
+/*==================================================================================*/
+/*                      CURRÍCULO-PAULO / TEMA_LIVRE-PAULO                          */
+/*==================================================================================*/
 
+
+/* títulos */
 .section-paulo .titulo {
     border-bottom: 2.5px solid white;
     padding-bottom: 8px;
 }
 
+
+/* parágrafos */
 .section-paulo p {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
+
+/* seção onde está a tabela */
 #section-tabela-paulo {
     display: flex;
     flex-direction: column;
@@ -448,6 +560,8 @@ nav button {
     padding: 20px;
 }
 
+
+/* tabela*/
 #tabela-paulo {
     margin-top: 20px;
     text-align: center;
@@ -456,12 +570,17 @@ nav button {
     border-collapse: collapse;
 }
 
+
+/* links */
 .section-paulo a {
     overflow-wrap: break-word;
 }
 
+
+/* mobile */
 @media (max-width: 768px) {
     
+    /* tabela-mobile*/
     #tabela-paulo,
     #tabela-paulo td,
     #tabela-paulo tr {
@@ -471,15 +590,20 @@ nav button {
         border: 1px solid white;
     }
 
+
+    /* colunas */
     #tabela-paulo td {
         padding: 10px;
     }
 
     
+    /* foto de perfil */
     #foto-perfil {
         text-align: center;
     }
     
 }
 
-/*---------------------------------------*/ /*PIMENTA in cu of others is refresco*/
+/*---------------------------------------*/
+
+

@@ -10,7 +10,138 @@
 
 <div class="pagina" id="formulario">
 
-    
+    <header id="cabecalho-formulario">
 
+        <h2>Fale com a gente</h2>
+        <h3>Preencha o formulário abaixo.</h3>
+        
+    </header>
+
+
+    <section id="section-formulario">
+
+        <form id="form" method="get" action="processamento.htm">
+
+            <!-- DADOS PESSOAIS -->
+            <fieldset id="dados-pessoais">
+                <legend>Dados Pessoais</legend>
+
+                <!-- nome -->
+                <div class="campo">
+                    
+                    <label for="nome">Nome completo</label>
+                    
+                    <input type="text" name="nome" id="nome"
+                    placeholder="Digite seu nome completo"
+                    minlength="3"
+                    required>
+                    
+                </div>
+
+                <!-- email -->
+                <div class="campo">
+
+                    <label for="email">E-mail</label>
+
+                    <input type="email" name="email" id="email"
+                    placeholder="seuemail@exemplo.com"
+                    required>
+                    
+                </div>
+
+                <!-- telefone -->
+                <div class="campo">
+
+                    <label for="fone">Telefone</label>
+
+                    <input type="tel" name="fone" id="fone"
+                    placeholder="(00) 00000-0000"
+                    pattern="(?:\(\d{2}\)|\d{2})\s?\d{4,5}-?\d{4}"
+                    title="Formato esperado: (00) 00000-0000"
+                    required>
+                    
+                </div>
+                
+            </fieldset>
+
+
+            <!-- MENSAGEM -->
+            <fieldset id="mensagem">
+                <legend>Detalhes da Mensagem</legend>
+                
+                <!-- assunto -->
+                <div class="campo">
+
+                    <label for="assunto"></label>
+
+                    <select name="assunto" id="assunto" required>
+
+                        <option value="" disabled selected hidden>Selecione uma opção</option>
+
+
+                        <option value="Duvida">Dúvida</option>
+
+                        <option value="Sugestao">Sugestão</option>
+
+                        <option value="Critica">Crítica</option>
+                        
+                    </select>
+                    
+                </div>
+
+                <!-- perfil do usuário -->
+                <div class="campo" id="campo-radio">
+
+                    <h4 id="titulo-perfil">Perfil do Usuário</h4>
+
+                    <div class="opcao-radio">
+                        
+                        <input type="radio" name="perfil" id="perfil-aluno" value="Aluno" required>
+                        
+                        <label for="perfil-aluno">Aluno</label>
+
+                    </div>
+                    
+
+                    <div class="opcao-radio">
+
+                        <input type="radio" name="perfil" id="perfil-professor" value="Professor" required>
+
+                        <label for="perfil-professor">Professor</label>
+                        
+                    </div>
+
+                    <div>
+
+                        <input type="radio" name="perfil" id="perfil-comunidade" value="Comunidade" required>
+
+                        <label for="perfil-comunidade">Comunidade Externa</label>
+
+                    </div>
+                    
+                </div>
+
+
+                <!-- mensagem -->
+                <div class="campo">
+
+                    <label for="mensagem">Mensagem</label>
+
+                    <textarea name="mensagem" id="mensagem"
+                    rows="5" minlength="15"
+                    placeholder="Escreva sua mensagem (mínimo de 15 caracteres)"
+                    required></textarea>
+                    
+                </div>
+                
+            </fieldset>
+
+
+            <button type="submit" id="botao-enviar">Enviar</button>
+
+            
+        </form>
+
+    </section>
 
 </div>

@@ -106,12 +106,155 @@ noscript {
     margin: 20px 0;
 }
 
+/*_______________________________________________________*/
+/*                     FORMULÁRIO                        */
+/*_______________________________________________________*/
 
-/* _____FORMULÁRIO_____ */
+/* página formulário */
+#formulario {
+    width: 95%;
+    max-width: 900px;
+
+    margin: 40px auto;
+}
 
 
+/* título */
+#cabecalho-formulario h2 {
+    font-size: 30pt;
+}
 
 
+/* subtítulo */
+#cabecalho-formulario h3 {
+    font-size: 12pt;
+    color: #bbbbbb;
+
+    margin-bottom: 25px;
+}
+
+
+/* área dos inputs */
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 15px;
+}
+.campo:last-child {         /* útilmo filho do container pai*/
+    margin-bottom: 0;
+}
+
+
+/* borda */
+#form fieldset {
+    border: 1px solid #444;
+    border-radius: 5px;
+
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* legend */
+#form legend {
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+/* label e titulo-perfil */
+#form label, #form #titulo-perfil {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+/* input */
+#form input,
+#form select,
+#form textarea {
+    background-color: #2f3030;
+    color: white;
+
+    border: 2px solid #555;
+    border-radius: 4px;
+    padding: 10px;
+
+    font-size: 1rem;
+    font-family: inherit;
+
+    transition: border-color 0.2s ease-in-out;  /* transição*/
+}
+
+#form textarea {
+    resize: vertical;   /* permite redmensionar a caixinha verticalmente*/
+}
+
+
+/* perfil do usuário */
+.opcao-radio {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+#campo-radio input {
+    width: 18px;
+    height: 18px;
+    
+    accent-color: #2ecc71;
+}
+
+/*_______________________________________________________*/
+/*                  ESTADOS VISUAIS                      */
+/*_______________________________________________________*/
+
+/* inválido --> vermelho */
+#form input:not([type="radio"]):invalid,
+#form select:invalid,
+#form textarea:invalid {
+    border-color: #e74c3c;
+}
+
+
+/* válido --> verde */
+#form input:not([type="radio"]):valid,
+#form select:valid,
+#form textarea:valid {
+    border-color: #2ecc71;
+}
+
+
+/* selecionado --> quando está digitando no campo */
+#form input:focus,
+#form select:focus,
+#form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+}
+
+/*----------*/
+
+/* botão de enviar */
+#botao-enviar {
+    background-color: #2ecc71;
+    color: #100E09;
+
+    font-weight: bold;
+    font-size: 1.1rem;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 12px 30px;
+    cursor: pointer;
+
+    transition: filter 0.2s ease-in-out;
+}
+#botao-enviar:hover {
+    filter: brightness(0.8);    /* o quanto se apaga o brilho*/
+}
 
 /*---------------------------------------*/
 

@@ -20,7 +20,7 @@
 
     <section id="section-formulario">
 
-        <form id="form" method="get" action="processamento.htm">
+        <form id="form" method="get" action="processamento.htm" onsubmit="return revisarEnvio(event)">      <!-- event: valor padrão do navegador -> obrigatório -->
 
             <!-- DADOS PESSOAIS -->
             <fieldset id="dados-pessoais">
@@ -136,7 +136,7 @@
                 
             </fieldset>
 
-
+            <!-- BOTÃO DE ENVIAR -->
             <button type="submit" id="botao-enviar">Enviar</button>
 
             

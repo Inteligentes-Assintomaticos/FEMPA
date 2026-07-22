@@ -1,4 +1,4 @@
-/* ATV07 - 523 */
+/* ATV06 - 523 */
 /* Felipe Gabriel Araújo de Freitas */
 /* Matheus Ramos Lima da Silva */
 /* Paulo Lázaro da Rocha Souza */
@@ -21,37 +21,33 @@
 
 
 body, html {
-    background-color: #0e2444;
+    background-color: #2f3030;
     color: white;
 
     overflow-x: hidden;             /* tira o scroll lateral ➡ costuma quebrar muito as páginas*/
 }
 
 
-/* mobile */
+/* MOBILE */
 @media (max-width: 768px) {        /* cria uma excessão de estilização em telas até 768px (ou outro tamanho definido)*/
-
-    /* fonte menor para tela menores */
     body, html {
         font-size: 12px;
     }
 }
 
 
-/* links */
 a {
     color: white;
 }
 
 
-/* responsividade para imagens*/
 img {                   /* responsividade de imagem*/
     max-width: 100%;
     height: auto;
 }
 
 
-/* noscript para o JS desativado */
+
 noscript {
     display: flex;
     flex-direction: column;
@@ -60,21 +56,18 @@ noscript {
     
     font-size: 2rem;                /* unidade relativa que se baseia no tamanho da fonte raiz do navegador (<html>) ➡ então mudar a fonte na raiz (<html>) muda a proporção de todos os textos*/
 
-    background-color: #e10cfd;
+    background-color: #100E09;
     padding: 30px;
 
     min-height: 300px;              /* altura padrão para telas maiores ➡ permite aumentar se o conteúdo interno aumentar*/
 }
 
-/*---------------------------------------*/
 
 
-/*==================================================================================*/
-/*                                  PÁGINAS                                         */
-/*==================================================================================*/
 
 
-/* classe para as páginas */
+
+/* PÁGINAS */
 .pagina {     
     display: flex;
     flex-direction: column;     /* direção dos elementos ➡️ um abaixo do outro*/
@@ -88,20 +81,32 @@ noscript {
 }
 
 
-/* página inicial (index) */
 #home {
     width: 95%;
     margin: 30px auto;
 }
 
 
-/* currículo de paulo e tema livre de paulo*/
+/* #curriculo-felipe {
+    
+} */
+
+
+/* #curriculo-matheus {
+
+} */
+
+
 #curriculo-paulo, #goku {
     margin: 0 20px 20px;
 }
 
 
-/* tema livre de matheus*/
+/* #tauz {
+
+} */
+
+
 #alice-in-chains {
     margin: 20px 0;
 }
@@ -109,11 +114,8 @@ noscript {
 /*---------------------------------------*/
 
 
-/*==================================================================================*/
-/*                             CABEÇALHO E RODAPÉ                                   */
-/*==================================================================================*/
 
-/* classe para cabeçalho e rodapé */
+/* CABEÇALHO E RODAPÉ */
 .cabecalho-rodape {
     display: flex;
     justify-content: center;    /* centraliza horizontalmente*/
@@ -123,15 +125,21 @@ noscript {
     min-height: 100px;
 }
 
+
+
+/* #cabecalho {
+} */
+
+/* #rodape {
+} */
+
+
 /*---------------------------------------*/
 
 
-/*==================================================================================*/
-/*                                MENU E CONTEÚDO                                   */
-/*==================================================================================*/
+/* ___ MENU E CONTEÚDO ___ */
 
 
-/* conteúdo */
 main {
     display: grid;
 
@@ -141,7 +149,8 @@ main {
 }
 
 
-/* conteúdo_mobile */
+
+/* MOBILE */
 @media (max-width: 768px)  {
     main {
         display: flex;
@@ -150,9 +159,8 @@ main {
 }
 
 
-/* _____MENU LATERAL_____*/
 
-/* menu */
+/* MENU LATERAL */
 nav {
     display: flex;
     flex-direction: column;
@@ -170,13 +178,14 @@ nav h2 {
     width: 90%;
     
     font-size: 2rem;
-    font-weight: bold;          /* texto mais gordo (PRECONCEITO DA PARTE DE FELIPE) ➡ negrito*/
+    font-weight: bold;          /* texto mais gordo ➡ negrito*/
 
     margin-top: 20px;
 
     padding-right: 25px;        /* para não "grudar" na borda*/       
     white-space: nowrap;        /* para não quebrar linha*/
 }    
+
 
 /* botões */
 nav button {
@@ -199,33 +208,38 @@ nav button {
 }
 
 
-/* link pesquisa */
-#link-pesquisa {
-    font-size: 1.5rem;
-    font-weight: bold;
-
-    text-decoration: none;
-
-    padding-right: 25px;
-    white-space: nowrap;
-
-    margin-bottom: 20px;
-}
-
-
-/* bordas */
 .borda {
     border-bottom: 3px solid white;
     width: 90%;
 }
 
 
-/* _____CONTEÚDO_____ */
+/* link de download da pesquisa (mesma cara dos botões do menu) */
+#link-pesquisa {
+    align-self: flex-start;
 
-/* conteúdo */
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    color: white;
+    text-decoration: underline;
+
+    padding-right: 25px;
+    white-space: nowrap;
+
+    margin-top: 4px;
+}
+
+
+/*---------------------------------------*/
+
+
+/* ___ CONTEÚDO ___ */
+
 #conteudo {
     background-color: #1c1c1c;
 }
+
 
 /* página inicial */
 #capa {
@@ -237,13 +251,10 @@ nav button {
 
 /*---------------------------------------*/
 
-/*==================================================================================*/
-/*                  INFORMAÇÕES INICIAIS - TEMA LIVRE: FELIPE                       */
-/*               INFORMAÇÕES INCIAIS - CURRÍCULO: FELIPE E MATHEUS                  */
-/*==================================================================================*/
 
+/* INFORMAÇÕES INICIAIS - TEMA LIVRE: FELIPE */
+/* INFORMAÇÕES INCIAIS - CURRÍCULO: FELIPE E MATHEUS */
 
-/* informações inicias --> foto e introdução */
 #informacoes_iniciais {
     display: flex;
     flex-direction: row;
@@ -256,8 +267,6 @@ nav button {
     align-items: center;    /* deixa no centro e impede que a imagem estique*/
 }
 
-
-/* parágrafos */
 #informacoes_iniciais p {
     margin: auto;
     width: 80%;
@@ -267,9 +276,8 @@ nav button {
 }
 
 
-/* mobile */
+/* MOBILE */
 @media (max-width: 768px) {
-
     #informacoes_iniciais {
         flex-direction: column;
 
@@ -285,12 +293,9 @@ nav button {
 
 /*---------------------------------------*/
 
-/*==================================================================================*/
-/*                          TABELA: FELIPE E MATHEUS                                */
-/*==================================================================================*/
+/* TABELA: FELIPE E MATHEUS */
 
-
-/* tabela --> formações de TI */
+/* tabela */
 #tabela-formacoes {
     color: inherit;       /* herda a cor do container pai*/
 
@@ -300,13 +305,16 @@ nav button {
     margin: 30px auto;
 }
 
-
-/* linhas e colunas da tabela */
 #tabela-formacoes tr,
 #tabela-formacoes th {
     padding: 20px;
 }
 
+/* títulos */
+#tabela-formacoes .titulo {
+    background-color:  #100E09;
+    min-height: 50px;
+}
 
 /* linhas */
 #tabela-formacoes tr {
@@ -315,27 +323,25 @@ nav button {
 }
 
 
-/* títulos */
-#tabela-formacoes .titulo {
-    background-color:  #100E09;
-    min-height: 50px;
-}
 
+/* cores das linhas */
 
-/* cores das linhas --> muda a cor das linhas de forma alternada */
+/* .linha-par {
+} */
+
 .linha-impar {
     background-color: #2e2e2e;
 }
 
 
-/* bordas --> bordas separadoras */
+/* bordas */
 .bordas-separador {     /* utilizado nas tabelas de paulo também*/
     border-right: 1px solid white;
     border-left: 1px solid white;
 }
 
 
-/* tabela --> centraliza a tabela dentro da section que está */
+/* section tabela */
 #tabela {
     margin: 30px auto;     /* para centralizar verticalmente a tabela*/
     width: 100%;
@@ -344,16 +350,17 @@ nav button {
 }
 
 
-/* título mobile --> aparece apenas quando a tela fica menor */
-#titulo-mobile {
-    display: none;      /* permanece invisível enquanto não atingir um tamanho de tela menor */
+#titulo-mobile {    /* telas maiores*/
+    display: none;
 }
 
 
-/* mobile */
+
+
+
+/* MOBILE */
 @media (max-width: 768px) {
 
-    /* tabela --> nova formatação para telas menores */
     #tabela-formacoes,
     #tabela-formacoes tr,
     #tabela-formacoes th,
@@ -368,26 +375,25 @@ nav button {
     }
 
 
-    /* linhas e colunas */
     #tabela-formacoes td,
     #tabela-formacoes th {
         margin-bottom: 10px;
     }
     
 
-    /* bordas --> para o novo forato de tabela */
+
     #tabela-formacoes .bordas-separador-mobile {
         border: 1px solid white;
     }
 
 
-    /* título --> deixa os títulos da tabela maior invisível */
     #tabela-formacoes .titulo-pc {
         display: none;
     }
 
 
-    /* muda a formatação */
+
+
     #tabela-formacoes .habilidade {
         background-color: #262626;
         border: 0.5px solid white;
@@ -397,14 +403,13 @@ nav button {
 
 }
 
+
 /*---------------------------------------*/
 
-/*==================================================================================*/
-/*                              CURRÍCULO-FELIPE                                    */
-/*==================================================================================*/
+
+/* CURRÍCULO-FELIPE */
 
 
-/* seção com o link do github */
 #github-felipe, #github-felipe a {
     text-align: center;
     
@@ -417,18 +422,13 @@ nav button {
 
 /*---------------------------------------*/
 
-/*==================================================================================*/
-/*                              TEMA_LIVRE-FELIPE                                   */
-/*==================================================================================*/
 
+/* TEMA_LIVRE-FELIPE */
 
-/* seção com a letra da música */
 #musica {
     margin-top: 100px;
 }
 
-
-/* título da seção e configuração do link */
 #musica #titulo, #musica #titulo a {
     background-color: #100E09;
     
@@ -440,8 +440,6 @@ nav button {
     width: auto;
 }
 
-
-/* seção com a letra da música */
 #letra {
     display: grid;
     grid-template-columns: auto auto;
@@ -457,8 +455,6 @@ nav button {
     min-height: 100%;
 }
 
-
-/* parágrafos */
 #letra p {
     background-color: rgba(0, 0, 0, 0.29);
     padding: 20px;
@@ -466,16 +462,11 @@ nav button {
 }
 
 
-/* mobile */
 @media (max-width: 1280px) {
-
-    /* informações inicias --> foto e introdução */
     #tauz #informacoes_iniciais {
         flex-direction: column;
     }
     
-
-    /* letra */
     #letra {
         display: flex;
         flex-direction: column;
@@ -483,7 +474,6 @@ nav button {
         align-items: center;
     }
 
-    /* parágrafos */
     #letra p {
         width: 100%;
         max-width: 600px;
@@ -491,12 +481,9 @@ nav button {
     }
 }
 
-/*---------------------------------------------*/
+/*---------------------------------------*/
 
-
-/*==================================================================================*/
-/*                                  CURRÍCULO-MATHEUS                               */
-/*==================================================================================*/
+/* CURRÍCULO-MATHEUS*/
 
 
 
@@ -504,30 +491,21 @@ nav button {
 
 
 
-/*---------------------------------------------*/
+/*---------------------------------------*/
 
+/* TEMA_LIVRE-MATHEUS */
 
-/*==================================================================================*/
-/*                              TEMA_LIVRE-MATHEUS                                  */
-/*==================================================================================*/
-
-
-/* imagens */
 .history-alice img {
     height: auto;
     max-width: 600px;
     width: 90%;
 }
 
-
-/* centralizando a imagem na seção de imagem */
 .history-alice .img {
     text-align: center;
     margin: 20px 0;
 }
 
-
-/* títulos */
 .history-alice .titulos {
     display: flex;
     flex-direction: row;
@@ -535,8 +513,6 @@ nav button {
     background-color: rgb(97, 39, 0);
 }
 
-
-/* parágrafos */
 .history-alice p {
     border-bottom: 1px solid rgb(97, 39, 0);
 
@@ -545,28 +521,24 @@ nav button {
     padding: 10px;
 }
 
+
 /*---------------------------------------*/
 
-/*==================================================================================*/
-/*                      CURRÍCULO-PAULO / TEMA_LIVRE-PAULO                          */
-/*==================================================================================*/
+/* CURRÍCULO-PAULO / TEMA_LIVRE-PAULO */
 
-
-/* títulos */
 .section-paulo .titulo {
     border-bottom: 2.5px solid white;
     padding-bottom: 8px;
 }
 
-
-/* parágrafos */
 .section-paulo p {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 
-/* seção onde está a tabela */
+
+
 #section-tabela-paulo {
     display: flex;
     flex-direction: column;
@@ -575,8 +547,6 @@ nav button {
     padding: 20px;
 }
 
-
-/* tabela*/
 #tabela-paulo {
     margin-top: 20px;
     text-align: center;
@@ -586,16 +556,14 @@ nav button {
 }
 
 
-/* links */
 .section-paulo a {
     overflow-wrap: break-word;
 }
 
 
-/* mobile */
+
 @media (max-width: 768px) {
     
-    /* tabela-mobile*/
     #tabela-paulo,
     #tabela-paulo td,
     #tabela-paulo tr {
@@ -605,14 +573,11 @@ nav button {
         border: 1px solid white;
     }
 
-
-    /* colunas */
     #tabela-paulo td {
         padding: 10px;
     }
 
     
-    /* foto de perfil */
     #foto-perfil {
         text-align: center;
     }
@@ -621,4 +586,224 @@ nav button {
 
 /*---------------------------------------*/
 
+/* CONTATO (FORMULÁRIO) */
+
+#secao-contato {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+#titulo-contato {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#subtitulo-contato {
+    color: #bbbbbb;
+    margin-bottom: 30px;
+}
+
+
+/* agrupamentos do formulário */
+#form-contato fieldset {
+    border: 1px solid #444;
+    border-radius: 8px;
+
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+#form-contato legend {
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+}
+
+
+/* campos */
+#form-contato .campo {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 18px;
+}
+
+#form-contato .campo:last-child {
+    margin-bottom: 0;
+}
+
+#form-contato label,
+#form-contato .rotulo-grupo {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+#form-contato input[type="text"],
+#form-contato input[type="email"],
+#form-contato input[type="tel"],
+#form-contato select,
+#form-contato textarea {
+    background-color: #2f3030;
+    color: white;
+
+    border: 2px solid #555;
+    border-radius: 5px;
+
+    padding: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+
+    transition: border-color 0.2s ease-in-out;
+}
+
+#form-contato textarea {
+    resize: vertical;
+}
+
+
+/* grupo de radio buttons (perfil) */
+.campo-radio .opcao-radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 8px;
+}
+
+.campo-radio .opcao-radio label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.campo-radio input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #2ecc71;
+}
+
+
+/* ESTADOS VISUAIS :valid / :invalid */
+
+#form-contato input:not([type="radio"]):invalid,
+#form-contato select:invalid,
+#form-contato textarea:invalid {
+    border-color: #e74c3c;      /* vermelho ➡ ainda não atende às restrições (required, pattern, minlength...) */
+}
+
+#form-contato input:not([type="radio"]):valid,
+#form-contato select:valid,
+#form-contato textarea:valid {
+    border-color: #2ecc71;      /* verde ➡ atende a todas as restrições do campo */
+}
+
+#form-contato input:focus,
+#form-contato select:focus,
+#form-contato textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+}
+
+
+/* botão de envio */
+#botao-enviar {
+    background-color: #2ecc71;
+    color: #100E09;
+
+    font-weight: bold;
+    font-size: 1.1rem;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 12px 30px;
+    cursor: pointer;
+
+    transition: filter 0.2s ease-in-out;
+}
+
+#botao-enviar:hover {
+    filter: brightness(0.9);
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    #secao-contato {
+        width: 95%;
+    }
+}
+
+/*---------------------------------------*/
+
+/* PROCESSAMENTO (CONFIRMAÇÃO DO ENVIO) */
+
+#processamento-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 80vh;
+    padding: 30px 15px;
+}
+
+#caixa-sucesso {
+    background-color: #292828;
+    border: 1px solid #2ecc71;
+    border-radius: 10px;
+
+    max-width: 650px;
+    width: 100%;
+
+    padding: 35px;
+    text-align: center;
+}
+
+#titulo-sucesso {
+    color: #2ecc71;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+#mensagem-personalizada {
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+#tabela-resumo-envio {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+#tabela-resumo-envio th,
+#tabela-resumo-envio td {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+#tabela-resumo-envio th {
+    width: 35%;
+    color: #bbbbbb;
+}
+
+#link-voltar {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#link-voltar:hover {
+    background-color: white;
+    color: #100E09;
+}
+
+/*---------------------------------------*/
 

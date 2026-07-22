@@ -1,4 +1,4 @@
-<!-- ATV07 - 523 -->
+<!-- ATV06 - 523 -->
 <!-- Felipe Gabriel Araújo de Freitas -->
 <!-- Matheus Ramos Lima da Silva -->
 <!-- Paulo Lázaro da Rocha Souza -->
@@ -63,11 +63,9 @@
 
             <h2>CONTATO</h2>
             <span class="borda"></span> <br>
-            <button onclick="conteudo_fuction('formulario.htm', 'FORMULÁRIO')">Formulário</button>
-
-
-            <a id="link-pesquisa" href="./pesquisa_validacao.pdf" download="">Baixar pesquisa (PDF)</a>
-
+            <button onclick="conteudo_fuction('contato.htm', 'CONTATO')">Formulário</button>
+            <a id="link-pesquisa" href="./pesquisa-validacao-formularios.pdf" download>Baixar Pesquisa (PDF)</a>
+        
         </nav>
         
 
@@ -100,6 +98,46 @@
                 document.getElementById('conteudo').innerHTML = capa                  // escreve o conteúdo armazenado
                 document.getElementById('titulo-cabecalho').innerHTML = 'TRIO DEVS'   // muda o título tamb´me
             }
+
+
+            // função do formulário de Contato (contato.htm) ➡ fica aqui porque scripts dentro
+            // de um fragmento carregado via innerHTML não são executados pelo navegador
+            function revisarEnvio(evento) {
+                evento.preventDefault();     // impede o envio automático inicial
+
+                const form = evento.target;
+
+                // garante que a validação nativa (required, pattern, minlength...) já passou
+                if (!form.checkValidity()) {
+                    form.reportValidity();   // mostra a mensagem nativa do navegador
+                    return false;
+                }
+
+                const nome = form.nome.value;
+                const email = form.email.value;
+                const telefone = form.telefone.value;
+                const assunto = form.assunto.options[form.assunto.selectedIndex].text;
+                const perfilSelecionado = form.querySelector('input[name="perfil"]:checked');
+                const perfil = perfilSelecionado ? perfilSelecionado.value : '';
+                const mensagem = form.mensagem.value;
+
+                const resumo =
+                    "Revise os dados antes de enviar:\n\n" +
+                    "Nome: " + nome + "\n" +
+                    "E-mail: " + email + "\n" +
+                    "Telefone: " + telefone + "\n" +
+                    "Assunto: " + assunto + "\n" +
+                    "Perfil: " + perfil + "\n" +
+                    "Mensagem: " + mensagem;
+
+                if (confirm(resumo)) {
+                    form.submit();     // Confirmar --> envio real via GET
+                }
+                // Cancelar --> não faz nada, o formulário permanece preenchido para correção
+
+                return false;
+            }
+
         </script>
 
     </main>

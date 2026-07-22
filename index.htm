@@ -109,6 +109,22 @@
 
                 const form = evento.target  /* guarda as informações do formulário de forma organizada */
 
+                //garante que a validação nativa já passou
+                if (!form.checkValidity()){
+                    form.reportValidity(); //mostra a mensagem nativa do navegador
+                    return false
+                };
+
+                const nome = form.nome.value;
+                const email = form.email.value;
+                const telefone = form.telefone.value;
+                const assunto = form.assunto.options[form.assunto.selectedIndex].text;
+                const perfilSelecionado = form.querySelector('input[name="perfil"]:checked');
+                const perfil = perfilSelecionado ? perfilSelecionado.valeu : '';
+                const mensagem = form.mensagem.voltar;
+
+                const resumo = "Revise os dados antes de enviar:\n\n" +
+                "Nome:" + nome
                 
 
                 

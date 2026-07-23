@@ -192,19 +192,38 @@
 
 
             // verifica se possui 'nome' ou (||) 'email' na URL
-            if (parametrosDaURL.has('nome') || parametrosDaURL.has('email')) {
-                sucesso(parametrosDaURL)
+            if (parametrosDaURL.has('nome') && parametrosDaURL.has('email')) {
+                sucesso(true)
+            }
+
+            else {
+                sucesso(false)
             }
 
 
 
 
             // tela de sucesso
-           function sucesso(parametros) {
-
-                conteudo_fuction("sucesso.htm", "FORMULÁRIO")     /* chamando a tela de sucesso*/
+            async function sucesso(informacoes) {
 
 
+                // caso a página seja aberta sem nenhum parâmetro (acesso direto)
+                if (!informacoes) {
+
+                    document.getElementById('titulo-sucesso-formulario').textContent = 'Nenhum dado recebido'
+                    document.getElementById('mensagem-sucesso-formulario').textContent = 'Esta página exibe a confirmação depois do envio do formulário de Contato. Volte e preencha o formulário primeiro.'
+
+                    document.getElementById('tabela-resumo-envio').style.display = 'none'       // muda o 'display' da tabela para none --> deixando invisível
+                }      
+                
+                
+
+
+                await conteudo_fuction("sucesso.htm", "FORMULÁRIO")     /* chamando a tela de sucesso*/
+
+
+                const parametros = new URLSearchParams(window.location.search)
+                
                 const nome = parametros.get('nome')        // pega o valor da chave nome
                 const email = parametros.get('email')      // pega o valor da chave email
 
@@ -224,24 +243,27 @@
 
 
                 // escrevendo nos campos da tabela --> agora estamos puxando os valores da chave na hora
-                document.getElementById('js-telefone').textContent = parametros.get('telefone') || '-'      // caso o primeiro parâmetro seja null (sem nenhuma informação) ele irá retornar o segundo ('-')
+                document.getElementById('js-telefone').textContent = parametros.get('fone') || '-'      // caso o primeiro parâmetro seja null (sem nenhuma informação) ele irá retornar o segundo ('-')
                 document.getElementById('js-assunto').textContent = parametros.get('assunto') || '-'
                 document.getElementById('js-perfil').textContent = parametros.get('perfil') || '-'
                 document.getElementById('js-mensagem').textContent = parametros.get('mensagem') || '-'
 
 
 
-                // caso a página seja aberta sem nenhum parâmetro (acesso direto)
-                if (!nome && !email) {      // se não tiver nada no parâmetro, ele será null, o que é considerado false, então com o '!' vira true --> dessa forma executando o if e fazendo as alterações para esse caso
 
-                    document.getElementById('titulo-sucesso-formulario').textContent = 'Nenhum dado recebido'
-                    document.getElementById('mensagem-sucesso-formulario').textContent = 'Esta página exibe a confirmação depois do envio do formulário de Contato. Volte e preencha o formulário primeiro.'
+                window.history.replaceState({}, '', 'index.htm')    // para reescrever a barra de endereço sem recarregar nada
 
-                    document.getElementById('tabela-resumo-envio').style.display = 'none'       // muda o 'display' da tabela para none --> deixando invisível
-                }
+                /* EXPLICAÇÃO:
+                    
+                    window.history.replaceState : serve para reescrever a URL atual
 
+                    {} : serve para adicionar informações sobre uma página --> auxiliando em outras funções, como de busca de uma página anterior
 
-                window.history.replaceState({}, '', 'index.htm')    // para limpar a informações do formulário da url
+                    '' : para adicionar um título --> descartado nos navegadores modernos, então deixa vazio
+
+                    'index.htm' : nova URL
+                */
+                
             }
 
 

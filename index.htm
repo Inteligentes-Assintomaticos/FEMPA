@@ -103,30 +103,65 @@
 
 
 
-
+            /* função para revisar o envio do formulário antes de envia-lo*/
             function revisarEnvio(evento) {
-                evento.prevenDefault()      /* evita que o navegador valide o formulário automaticamente */
+                evento.prevenDefault()      // evita que o navegador valide o formulário automaticamente
 
-                const form = evento.target  /* guarda as informações do formulário de forma organizada */
-
-                //garante que a validação nativa já passou
-                if (!form.checkValidity()){
-                    form.reportValidity(); //mostra a mensagem nativa do navegador
-                    return false
-                };
-
-                const nome = form.nome.value;
-                const email = form.email.value;
-                const telefone = form.telefone.value;
-                const assunto = form.assunto.options[form.assunto.selectedIndex].text;
-                const perfilSelecionado = form.querySelector('input[name="perfil"]:checked');
-                const perfil = perfilSelecionado ? perfilSelecionado.valeu : '';
-                const mensagem = form.mensagem.voltar;
-
-                const resumo = "Revise os dados antes de enviar:\n\n" +
-                "Nome:" + nome
+                const form = evento.target  // guarda as informações do formulário de forma organizada
                 
 
+                if (!form.checkValidity()) {    // verifica se todos os campos estão válidos --> a '!' inverte o resultado para que entre no 'if', então se tiver algo inválido ele vai entrar no 'if'
+                    form.reportValidity()       // aponta para o problema que está invalidando o formulário
+                    return false                // cancelando o envio do formulário --> até que o campo problemático seja corrigido
+                }
+                
+
+                const nome = form.nome.value
+                const email = form.email.value
+                const telefone = form.fone.value
+                const mensagem = form.mensagem.value
+
+                const assunto = form.assunto.options[form.assunto.selectedIndex].text       // retorna o option selecionado
+
+                /* EXPLICAÇÃO:
+                    
+                    form.assunto.options : lista de todos os options
+                    form.assunto.selectedIndex : index do option selecionado
+                    .text : pega o texto visível (o que está escrito dentro do option) --> se fosse .value pegaria o valor do atributo value
+                */
+
+
+                const perfilSelecionado = form.querySelector('input[name="perfil"]:checked')    // retorna o input selecionado --> literalmente o input
+                const perfil = perfilSelecionado ? perfilSelecionado.value : ""                 // if de uma linha --> abaixo está como seria normalmente
+
+                /* 
+                let perfil
+
+                if (perfilSelecionado) {                // no JS, qualquer valor diferente de: [false, 0, null, "", undefined, NaN] é true
+                    perfil = perfilSelecionado.value
+                }
+                else {
+                    perfil = ""
+                }
+                */
+
+                /* variável com o resumo do que foi preenchido nos campos do formulário*/
+                const resumo =
+                "Revise os dados antes de enviar:\n\n" +
+                "Nome: " + nome + "\n" +
+                "Email: " + "\n" +
+                "Telefone: " + "\n" +
+                "Assunto: " + "\n" +
+                "Perfil: " + "\n" +
+                "Mensagem: " + "\n";
+
+
+                if (confirm(resumo)) {      // aparece uma tela de confirmação com o texto armazenado na variável 'resumo' --> se clicar em OK, é retornado true e o 'if' é executado, se clicar em Cancelar, é retornado false e o if não é retornado
+                    form.submit()          // enviar o formulário --> mas diferente do botão com type="submit" (que entra nessa função pelo atributo onsubmit), o .submit() envia o formulário diretamente, evitando um loop 
+                }
+                
+
+                return false              // encerra a função e retorna um valor --> o valor é false, devido ao que foi deixado lá no form do 'formulario.htm', pois quando clicamos no botão, o navegador por padrão já quer enviar o formulário, mas com o 'onsubmit' barramos isso, pois mandamos ele olhar primeiro o que tem no 'onsubmit', que no caso foi essa função, acima temos o 'form.submit()' que enviou o formulário, então se deixasse true, o formulário seria enviado duas vezes, então por isso deve ser false
                 
             }
             

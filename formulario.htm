@@ -20,7 +20,8 @@
 
     <section id="section-formulario">
 
-        <form id="form" method="get" action="processamento.htm" onsubmit="return revisarEnvio(event)">      <!-- event: valor padrão do navegador -> obrigatório -->
+        <form id="form" method="get" action="processamento.htm" onsubmit="return revisarEnvio(event)">      <!-- event: valor padrão do navegador -> obrigatório
+                                                                                                                 onsumit: executa ao clicar no botão 'Enviar' -> a função 'revisarEnvio(event)' é executada e o valor dela (true ou false), junto ao 'retur', retorna ao navegador se o formulário deve ou não ser enviado -->
 
             <!-- DADOS PESSOAIS -->
             <fieldset id="dados-pessoais">

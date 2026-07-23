@@ -193,33 +193,23 @@
 
             // verifica se possui 'nome' ou (||) 'email' na URL
             if (parametrosDaURL.has('nome') && parametrosDaURL.has('email')) {
-                sucesso(true)
+                sucesso()
             }
 
-            else {
-                sucesso(false)
-            }
 
 
 
 
             // tela de sucesso
-            async function sucesso(informacoes) {
-
-
-                // caso a página seja aberta sem nenhum parâmetro (acesso direto)
-                if (!informacoes) {
-
-                    document.getElementById('titulo-sucesso-formulario').textContent = 'Nenhum dado recebido'
-                    document.getElementById('mensagem-sucesso-formulario').textContent = 'Esta página exibe a confirmação depois do envio do formulário de Contato. Volte e preencha o formulário primeiro.'
-
-                    document.getElementById('tabela-resumo-envio').style.display = 'none'       // muda o 'display' da tabela para none --> deixando invisível
-                }      
-                
-                
+            async function sucesso() {
 
 
                 await conteudo_fuction("sucesso.htm", "FORMULÁRIO")     /* chamando a tela de sucesso*/
+
+                document.getElementById("section-processamento-sucesso").style.display = 'flex'
+                document.getElementById("section-processamento-sucesso").style.flexDirection = 'column'
+                document.getElementById("section-processamento-erro").style.display = 'none'
+
 
 
                 const parametros = new URLSearchParams(window.location.search)

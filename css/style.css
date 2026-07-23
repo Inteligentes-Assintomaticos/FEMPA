@@ -273,22 +273,24 @@ noscript {
 
 
 /* caixa */
-#section-processamento {
+.section-processamento {
     background-color: #292828;
     border: 1px solid #2ecc71;
     border-radius: 7px;
 
-    max-width: 700px;
-    width: 100%;
+    max-width: 900px;
+    width: 90%;
 
     padding: 30px;
 
     text-align: center;
+    vertical-align: center;
+
 }
 
 
 /* título */
-#titulo-sucesso-formulario {
+.titulo-sucesso-formulario {
     color: #2ecc71;
     font-weight: 1.8rem;
     margin-bottom: 15px;
@@ -296,7 +298,7 @@ noscript {
 
 
 /* mensagem */
-#mensagem-sucesso-formulario {
+.mensagem-formulario {
     margin-bottom: 25px;
     line-height: 1.5;
 }
@@ -333,7 +335,7 @@ noscript {
 /*++++++++++++++++++++++++++++*/
 
 /* botão de voltar*/
-#botao-voltar {
+.botao-voltar {
     display: inline-block;
     background-color: transparent;
 
@@ -347,7 +349,7 @@ noscript {
     font-weight: bold;
 }
 
-#botao-voltar:hover {
+.botao-voltar:hover {
     background-color: white;
     color: black;
 }

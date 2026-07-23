@@ -12,12 +12,12 @@
 <div id="processamento" class="pagina">
 
 
-    <section id="section-processamento">
+    <section class="section-processamento" id="section-processamento-sucesso" style="display: none;">
         
         <header>
-            <h3 id="titulo-sucesso-formulario">Mensagem enviada com sucesso!</h3>
+            <h3 class="titulo-sucesso-formulario">Mensagem enviada com sucesso!</h3>
 
-            <h4 id="mensagem-sucesso-formulario">
+            <h4 class="mensagem-formulario">
                 Obrigado, <strong id="js-nome"></strong>! Recebemos sua mensagem e enviaremos uma confirmação para <strong id="js-email"></strong> em breve.
             </h4>
         </header>
@@ -51,7 +51,25 @@
 
         </table>
 
-        <button id="botao-voltar" onclick="voltar_capa()">Voltar para o início</button>
+        <button class="botao-voltar" onclick="voltar_capa()">Voltar para o início</button>
+
+    </section>
+
+    
+
+
+    <section class="section-processamento" id="section-processamento-erro">
+        
+        <header>
+            <h3 class="titulo-sucesso-formulario">Nenhum dado recebido</h3>
+
+            <h4 class="mensagem-formulario">
+                Esta página exibe a confirmação depois do envio do formulário de Contato. Volte e preencha o formulário primeiro.
+            </h4>
+        </header>
+
+
+        <a href="index.htm" class="botao-voltar">Voltar para o início</a>
 
     </section>
 

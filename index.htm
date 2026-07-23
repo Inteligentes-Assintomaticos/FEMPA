@@ -87,13 +87,9 @@
         <script>
 
             // função para mudar o conteúdo
-            async function conteudo_fuction(arquivo, nome, url) {
+            async function conteudo_fuction(arquivo, nome) {
                 document.getElementById('conteudo').innerHTML = await (await fetch(arquivo)).text()         // para puxar o arquivo no servidor, esperar e converter em texto
                 document.getElementById('titulo-cabecalho').innerHTML = nome                                // para mudar o título
-
-                if (url) {
-                    window.history.replaceState({}, '', 'index.htm')    /* para limpar a informações do formulário da url*/
-                }
             }
 
 
@@ -185,24 +181,70 @@
             
 
             // para carregar a tela de sucesso ao enviar o formulário
-            const parametrosDaURL = new URLSearchParams(window.location.search)
+            const parametrosDaURL = new URLSearchParams(window.location.search)      // armazenando os parâmetros da url em uma variável
 
+            /* EXPLICAÇÃO:
+
+                window.location.search : função que pega a parte da URL que vem depois de '?' (http://127.0.0.1:3000/index.htm?nome=Felipe+Gabriel+Ara%...) --> que são as informações do formulário
+
+                new URLSearchParams() : função que descodifica e organiza as chaves da URL
+            */
+
+
+            // verifica se possui 'nome' ou (||) 'email' na URL
             if (parametrosDaURL.has('nome') || parametrosDaURL.has('email')) {
-                sucesso()
+                sucesso(parametrosDaURL)
             }
+
+
 
 
             // tela de sucesso
-           function sucesso() {
-                conteudo_fuction("sucesso.htm", "FORMULÁRIO", "url")     /* chamando a tela de sucesso*/
+           function sucesso(parametros) {
+
+                conteudo_fuction("sucesso.htm", "FORMULÁRIO")     /* chamando a tela de sucesso*/
 
 
+                const nome = parametros.get('nome')        // pega o valor da chave nome
+                const email = parametros.get('email')      // pega o valor da chave email
+
+
+
+                // escreve no campo com id correspondente --> no caso o strong
+                document.getElementById('js-nome').textContent = nome || 'visitante'
+                document.getElementById('js-email').textContent = email || 'não informado'
+
+                /* .textContent vs .innerHTML
+
+                    .textContent : trata tudo como texto puro --> então tags html são literalmente escritas e não tratadas como código
+
+                    .innerHTML : trata como código --> tags html são código
+                */
+
+
+
+                // escrevendo nos campos da tabela --> agora estamos puxando os valores da chave na hora
+                document.getElementById('js-telefone').textContent = parametros.get('telefone') || '-'      // caso o primeiro parâmetro seja null (sem nenhuma informação) ele irá retornar o segundo ('-')
+                document.getElementById('js-assunto').textContent = parametros.get('assunto') || '-'
+                document.getElementById('js-perfil').textContent = parametros.get('perfil') || '-'
+                document.getElementById('js-mensagem').textContent = parametros.get('mensagem') || '-'
+
+
+
+                // caso a página seja aberta sem nenhum parâmetro (acesso direto)
+                if (!nome && !email) {      // se não tiver nada no parâmetro, ele será null, o que é considerado false, então com o '!' vira true --> dessa forma executando o if e fazendo as alterações para esse caso
+
+                    document.getElementById('titulo-sucesso-formulario').textContent = 'Nenhum dado recebido'
+                    document.getElementById('mensagem-sucesso-formulario').textContent = 'Esta página exibe a confirmação depois do envio do formulário de Contato. Volte e preencha o formulário primeiro.'
+
+                    document.getElementById('tabela-resumo-envio').style.display = 'none'       // muda o 'display' da tabela para none --> deixando invisível
+                }
+
+
+                window.history.replaceState({}, '', 'index.htm')    // para limpar a informações do formulário da url
             }
 
 
-            
-
-            
         </script>
 
     </main>

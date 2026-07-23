@@ -87,10 +87,15 @@
         <script>
 
             // função para mudar o conteúdo
-            async function conteudo_fuction(arquivo, nome) {
+            async function conteudo_fuction(arquivo, nome, url) {
                 document.getElementById('conteudo').innerHTML = await (await fetch(arquivo)).text()         // para puxar o arquivo no servidor, esperar e converter em texto
                 document.getElementById('titulo-cabecalho').innerHTML = nome                                // para mudar o título
+
+                if (url) {
+                    window.history.replaceState({}, '', 'index.htm')    /* para limpar a informações do formulário da url*/
+                }
             }
+
 
 
             // para voltar para a capa
@@ -98,14 +103,22 @@
 
             function voltar_capa() {
                 document.getElementById('conteudo').innerHTML = capa                  // escreve o conteúdo armazenado
-                document.getElementById('titulo-cabecalho').innerHTML = 'TRIO DEVS'   // muda o título tamb´me
+                document.getElementById('titulo-cabecalho').innerHTML = 'TRIO DEVS'   // muda o título também
             }
 
 
 
-            /* função para revisar o envio do formulário antes de envia-lo*/
+
+            // ------------------------------------------------
+
+
+
+
+
+
+            // função para revisar o envio do formulário antes de envia-lo
             function revisarEnvio(evento) {
-                evento.prevenDefault()      // evita que o navegador valide o formulário automaticamente
+                evento.preventDefault()      // evita que o navegador valide o formulário automaticamente
 
                 const form = evento.target  // guarda as informações do formulário de forma organizada
                 
@@ -151,7 +164,7 @@
                 "Nome: " + nome + "\n" +
                 "Email: " + email + "\n" +
                 "Telefone: " + telefone + "\n" +
-                "Assunto: " + telefone + "\n" +
+                "Assunto: " + assunto + "\n" +
                 "Perfil: " + perfil + "\n" +
                 "Mensagem: " + mensagem + "\n";
 
@@ -164,6 +177,31 @@
                 return false              // encerra a função e retorna um valor --> o valor é false, devido ao que foi deixado lá no form do 'formulario.htm', pois quando clicamos no botão, o navegador por padrão já quer enviar o formulário, mas com o 'onsubmit' barramos isso, pois mandamos ele olhar primeiro o que tem no 'onsubmit', que no caso foi essa função, acima temos o 'form.submit()' que enviou o formulário, então se deixasse true, o formulário seria enviado duas vezes, então por isso deve ser false
                 
             }
+            
+
+
+            // ------------------------------------------------
+
+            
+
+            // para carregar a tela de sucesso ao enviar o formulário
+            const parametrosDaURL = new URLSearchParams(window.location.search)
+
+            if (parametrosDaURL.has('nome') || parametrosDaURL.has('email')) {
+                sucesso()
+            }
+
+
+            // tela de sucesso
+           function sucesso() {
+                conteudo_fuction("sucesso.htm", "FORMULÁRIO", "url")     /* chamando a tela de sucesso*/
+
+
+            }
+
+
+            
+
             
         </script>
 

@@ -1,0 +1,180 @@
+[
+  {
+    "model": "portal.conteudo",
+    "pk": 1,
+    "fields": {
+      "titulo": "Início",
+      "slug": "inicio",
+      "html": "<section id=\"capa\"><img src=\"/static/portal/img/trio_devs.png\" alt=\"Capa do portal Trio Devs\"></section>",
+      "ativo": true
+    }
+  },
+  {
+    "model": "portal.conteudo",
+    "pk": 2,
+    "fields": {
+      "titulo": "Currículo - Felipe",
+      "slug": "curriculo-felipe",
+      "html": "<div class=\"pagina\" id=\"curriculo-felipe\">\n\n        \n        <section id=\"informacoes_iniciais\">\n\n            <img title=\"foto currículo\" src=\"/static/portal/img/foto-curriculo-felipe.png\" alt=\"foto do currículo\" width=\"200px\">\n            \n\n            <p>Desenvolvedor web com experiência no desenvolvimento de interfaces e aplicações para a web, utilizando tecnologias como <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>. Habituado a boas práticas de desenvolvimento, versionamento com Git e criação de layouts responsivos. Em busca de oportunidade para consolidar a carreira e contribuir com projetos de impacto real.</p>\n\n        </section>\n\n\n        <section id=\"tabela\">\n\n            <table id=\"tabela-formacoes\">\n\n                \n                <tr class=\"titulo\">\n\n                    \n                    <th class=\"titulo-pc\"></th>\n\n                    <th class=\"titulo-pc\">Formação</th>\n\n                    <th class=\"titulo-pc\">Cursos</th>\n\n                    <th id=\"titulo-mobile\">FORMAÇÕES</th>\n                    \n                </tr>\n\n\n\n\n                \n                <tr class=\"linha-impar bordas-separador bordas-separador-mobile\">\n\n                    <th class=\"habilidade\">Desenvolvimento Front-End</th>\n\n\n                    <td class=\"bordas-separador\">Desenvolvimento Web / Bacharelado em Ciência da Computação</td>\n\n                    <td>HTML, CSS e JavaScript (Alura, Rocketseat, DIO)</td>\n                    \n                </tr>\n\n\n\n                \n                <tr class=\"linha-par bordas-separador bordas-separador-mobile\">\n\n                    <th class=\"habilidade\">Desenvolvimento Back-End</th>\n\n\n                    <td class=\"bordas-separador\">Bacharelado em Sistemas de Informação / Engenharia de Software</td>\n\n                    <td>Node.js, Python com Django, PHP (Udemy, Coursera)</td>\n                    \n                </tr>\n\n\n\n                \n                <tr class=\"linha-impar bordas-separador bordas-separador-mobile\">\n\n                    <th class=\"habilidade\">Desenvolvimento Full Stack</th>\n\n\n                    <td class=\"bordas-separador\">Bacharelado em Engenharia de Software / Bootcamp Full Stack</td>\n\n                    <td>Full Stack Web Development (Rocketseat, The Odin Project)</td>\n                    \n                </tr>\n\n\n\n                \n                <tr class=\"linha-par bordas-separador bordas-separador-mobile\"\n                style=\"border-bottom: 1px solid white;\">\n\n                    <th class=\"habilidade\">Segurança em Aplicações Web</th>\n\n\n                    <td class=\"bordas-separador\">Bacharelado em Segurança da Informação / Ciência da Computação</td>\n\n                    <td>OWASP, Ethical Hacking Web (Desec, Udemy)</td>\n                        \n                </tr>\n                \n            </table>\n        </section>\n\n\n    \n    <section id=\"github-felipe\">\n        <h2>\n            <a title=\"Meu GitHub\" href=\"https://github.com/Felipe-dev7\" target=\"_blank\">GITHUB</a>\n        </h2>\n    </section>\n\n        \n</div>",
+      "ativo": true
+    }
+  },
+  {
+    "model": "portal.conteudo",
+    "pk": 3,
+    "fields": {
+      "titulo": "Player Tauz",
+      "slug": "player-tauz",
+      "html": "<div class=\"pagina\" id=\"tauz\">\n\n    \n    <section id=\"informacoes_iniciais\">\n\n        <img title=\"foto player tauz\" src=\"/static/portal/img/tauz.png\" alt=\"foto do player tauz\" width=\"200px\">\n\n        <p>O Player Tauz é um dos principais nomes do rap geek no Brasil, conhecido por transformar universos de jogos, animes e filmes em músicas cheias de narrativa e emoção. Ele começou sua trajetória no <strong>YouTube</strong> por volta de 2013, em uma época em que o conteúdo voltado para cultura nerd ainda estava crescendo no país. Com o tempo, Tauz conquistou um público fiel ao unir batidas modernas com letras que exploram sentimentos, conflitos e histórias de personagens famosos.\n\n        <br> <br>\n            \n        Grande parte do seu sucesso também está ligada a parcerias com o grupo <strong>7 Minutoz</strong>, que ajudou a consolidar o <q>rap geek</q> como um gênero relevante no Brasil. Juntos, eles criaram músicas que viralizaram e marcaram uma geração de fãs de games e cultura pop. O diferencial de Tauz sempre foi sua capacidade de ir além de batalhas e ação, trazendo reflexões mais profundas dentro de universos fictícios. A seguir uma de suas obras mais conhecidas, <q>Rap do Minecraft</q>.</p>\n\n    </section>\n\n\n    \n    <section id=\"musica\">\n\n        <h2 id=\"titulo\">\n            <a title=\"Rap do Minecraft\" href=\"https://youtu.be/LVMHYzVS9Y4\" target=\"_blank\">RAP DO MINECRAFT</a>\n        </h2>\n\n        \n        <div id=\"letra\">\n        \n            <p>\n            Bem-vindo ao Minecraft, meu amigo <br>\n            Na jornada desse game, ficará surpreendido <br>\n            Sinta liberdade para poder criar <br>\n            Apenas qualquer coisa que poder imaginar <br>\n            Modo criativo ou sobrevivência <br>\n            Em uma aventura, tenha sua experiência <br>\n            Nem preciso dizer o que se pode ou não fazer <br>\n            Faça o que quiser e verá acontecer <br>\n            Construindo e minerando sem nenhuma trajetória <br>\n            Sem ao menos perceber, vou fazendo minha história <br>\n            Neste universo realmente impressionante <br>\n            Explorando cavernas a procura de diamantes <br>\n            Combinando itens, construindo casas <br>\n            De dia ou de noite, fazendo minha jornada <br>\n            Modificações aumentam a diversidade <br>\n            E fica ainda mais legal com os amigos de verdade <br> <br>\n\n            Yeah, Minecraft, é <br>\n            Você conhece! <br>\n            Num mundo de blocos, faço qualquer criação <br>\n            Onde o único limite é a imaginação <br>\n            (Yeah!) <br>\n            Minecraft, é <br>\n            Você conhece! <br>\n            Num mundo de blocos, faço qualquer criação <br>\n            Onde o único limite é a imaginação <br>\n            Yeah\n            </p>\n\n\n            <p>\n            Quando cai a noite, é preciso ter cuidado <br>\n            Pode aparecer mobs por todo lado <br>\n            Esqueleto, Zumbi, Aranha ou Creeper <br>\n            Tenha coragem para invocar o Wither <br>\n            Não olhe nos olhos de um Enderman <br>\n            Assim como o Slender, te persegue também <br>\n            Mas o que mais assusta é a lenda desse game <br>\n            Herobrine, esse aí é diferente <br>\n            Sua existência é um grande mistério <br>\n            Tudo que se fala pode ou não estar correto <br>\n            Realmente Minecraft é incomparável <br>\n            Nunca nada semelhante tinha sido criado <br>\n            Recorde de vendas, grande inspiração <br>\n            Alcançando os da antiga e da nova geração <br>\n            Vai falar de gráfico? Mano, dá um tempo <br>\n            Ninguém nunca reclamou de jogar Super Nintendo! <br> <br>\n\n            Yeah, Minecraft, é <br>\n            Você conhece <br>\n            Num mundo de blocos, faço qualquer criação <br>\n            Onde o único limite é a imaginação <br>\n            (Yeah!) <br>\n            Minecraft, é <br>\n            Você conhece! <br>\n            Num mundo de blocos, faço qualquer criação <br>\n            Onde o único limite é a imaginação\n            </p>\n\n        </div>\n\n    </section>\n        \n</div>",
+      "ativo": true
+    }
+  },
+  {
+    "model": "portal.conteudo",
+    "pk": 4,
+    "fields": {
+      "titulo": "Currículo - Matheus",
+      "slug": "curriculo-matheus",
+      "html": "<div class=\"pagina\" id=\"curriculo-matheus\">\n\n    <section id=\"informacoes_iniciais\">\n        <img title=\"foto curriculo\" src=\"/static/portal/img/foto-curriculo-matheus.png\" alt=\"foto do L\">\n\n        <p>\n        Sou brasileiro e sou obcecado por tecnologia. Estou cursando o Curso Técnico Integrado de Ciência da Computação do Ensino Médio do Instituto Federal. Tenho conhecimento de Infraestrutura de Redes, Sistemas Operacionais, Programação e Montagem de Computadores.\n        </p>\n        \n    </section>\n\n\n    <section id=\"tabela\">\n        \n        <table id=\"tabela-formacoes\">\n\n            <tr class=\"titulo\">\n                <th colspan=\"5\">Habilidades</th>\n            </tr>\n\n            <tr class=\"linha-impar bordas-separador bordas-separador-mobile\">\n                <th class=\"habilidade\">Linguagens</th>\n                <td class=\"bordas-separador\">Python</td>\n                <td class=\"bordas-separador\">JavaScript</td>\n                <td class=\"bordas-separador\">CSS</td>\n                <td class=\"bordas-separador\">HTML</td>\n            </tr>\n\n            <tr class=\"linha-par bordas-separador bordas-separador-mobile\">\n                <th class=\"habilidade\">Sistemas</th>\n                <td class=\"bordas-separador\">Windows</td>\n                <td class=\"bordas-separador\">Ubuntu</td>\n                <td class=\"bordas-separador\">Kali Linux</td>\n                <td class=\"bordas-separador\">Fedora</td>\n            </tr>\n\n            <tr class=\"linha-impar bordas-separador bordas-separador-mobile\"\n            style=\"border-bottom: 1px solid white;\">\n                <th class=\"bordas-separador habilidade\">Tools</th>\n                <td class=\"bordas-separador\">GitHub</td>\n                <td class=\"bordas-separador\">Git</td>\n                <td class=\"bordas-separador\">Matplotlib</td>\n                <td class=\"bordas-separador\">Numpy</td>\n            </tr>\n\n        </table>        \n\n    </section>\n\n</div>",
+      "ativo": true
+    }
+  },
+  {
+    "model": "portal.conteudo",
+    "pk": 5,
+    "fields": {
+      "titulo": "Alice in Chains",
+      "slug": "alice-in-chains",
+      "html": "<div class=\"pagina\" id=\"alice-in-chains\">\n\n    <section class=\"history-alice\">\n\n        <h2 class=\"titulos\">History</h2>\n\n        <p>\n        A banda se formou em 1987, quando o vocalista Layne Staley (ex-Mother Love Bone) se juntou ao guitarrista Jerry Cantrell. Com o baixista Mike Starr e o baterista Sean Kinney, fecharam a formação. O nome \"Alice in Chains\" foi sugerido por Staley, remetendo a uma fantasia sobre mulheres de couro (\"alice in chains\" como uma brincadeira com \"Alice in Wonderland\").\n        </p>\n\n        <div class=\"img\">\n            <img title=\"banda\" src=\"/static/portal/img/aliceinchainsbanda.png\" alt=\"foto de uma banda\">\n        </div>\n\n    </section>\n\n\n    <section class=\"history-alice\">\n\n        <h2 class=\"titulos\">Sucess</h2>\n\n        <p>\n        <strong>1990:</strong> Lançam o EP Facelift, com o hit Man in the Box. O som era pesado, com vocais melódicos e letras sombrias, misturando heavy metal com o grunge. <br> <br>\n\n        <strong>1992:</strong> Dirt é um marco. Músicas como Rooster, Would? e Them Bones falam de vício, depressão e a guerra do Vietnã (experiência do pai de Cantrell). O álbum vendeu milhões e consolidou a banda.\n        </p>\n\n        <div class=\"img\">\n            <img title=\"alice in chains\" src=\"/static/portal/img/facelift.png\" alt=\"capa de música\">\n        </div>\n        \n    </section>\n\n\n    <section class=\"history-alice\">\n\n        <h2 class=\"titulos\">Bleed The Feak</h2>\n\n        <p>\n        \"Bleed the Freak\" é um hino de resistência contra a exploração emocional e a falsidade social. O \"freak\" não é mais vítima passiva: decide parar de sangrar pelos outros e exige que quem o julga também enfrente suas próprias feridas. É um convite à autenticidade, mesmo que isso signifique se isolar.\n        </p>\n\n        <div class=\"img\">\n            <a href=\"https://youtu.be/-xQQzi0IdLY?list=RD-xQQzi0IdLY\" target=\"_blank\">\n                <img title=\"clip\" src=\"/static/portal/img/video_capa.png\" alt=\"vídeo clip\" style=\"max-width: 800px;\">\n            </a>\n        </div>\n\n    </section>\n\n\n\n</div>",
+      "ativo": true
+    }
+  },
+  {
+    "model": "portal.conteudo",
+    "pk": 6,
+    "fields": {
+      "titulo": "Currículo - Paulo",
+      "slug": "curriculo-paulo",
+      "html": "<div class=\"pagina\" id=\"curriculo-paulo\">\n\n    <section id=\"foto-perfil\">\n        <img title=\"foto currículo\" src=\"/static/portal/img/foto-curriculo-paulo.png\" alt=\"foto de uma pessoa\" width=\"150px\" style=\"margin: 20px 0;\">\n    </section>\n\n\n\n    <section class=\"section-paulo\">\n        <h2 class=\"titulo\">Dados Pessoais</h2>\n\n        <p>\n            <strong>Nome:</strong> Paulo Lázaro da Rocha Souza <br>\n            <strong>Idade:</strong> 17 anos <br>\n            <strong>Objetivo:</strong> Atuar fora da área de informática. <br>\n            <strong>Instagram:</strong> <a title=\"Instragram pessoal\" href=\"https://www.instagram.com/lazaropaulo583?utm_source=qr\" target=\"_blank\">https://www.instagram.com/lazaropaulo583?utm_source=qr</a>\n        </p>\n        \n    </section>\n\n\n    <section class=\"section-paulo\">\n        <h2 class=\"titulo\">Formação Acadêmica</h2>\n\n        <p>Ensino Médio em andamento - IFAL</p>\n\n    </section>\n\n\n    <section class=\"section-paulo\">\n        <h2 class=\"titulo\">Experiência Profissional</h2>\n\n        <p>Em busca da primeira oportunidade.</p>\n    </section>\n\n\n    <section class=\"section-paulo\" id=\"section-tabela-paulo\">\n\n        <h2 class=\"titulo\">Mais Sobre Mim</h2>\n        \n        <table id=\"tabela-paulo\">\n\n            <tr>\n\n                <td class=\"bordas-separador\">\n                    <h3>Hobbies</h3>\n                    <p>Assistir meus animes e séries.</p>\n                </td>\n\n\n                <td class=\"bordas-separador\">\n                    <h3>Metas</h3>\n                    <p>Tornar-me bem sucedido.</p>\n                </td>\n\n\n                <td class=\"bordas-separador\">\n                    <h3>Sonhos</h3>\n                    <p>Viajar pelo mundo e conhecer novas culturas.</p>\n                </td>\n\n            </tr>\n\n        </table>\n    \n    </section>\n    \n</div>",
+      "ativo": true
+    }
+  },
+  {
+    "model": "portal.conteudo",
+    "pk": 7,
+    "fields": {
+      "titulo": "Dragon Ball Z",
+      "slug": "dragon-ball-z",
+      "html": "<div class=\"pagina\" id=\"goku\">\n\n    <section id=\"foto-perfil\">\n        <img title=\"Goku\" src=\"/static/portal/img/goku.jpg\" alt=\"foto do Goku\" width=\"150px\" style=\"margin: 20px 0;\">\n    </section>\n\n\n\n    <section class=\"section-paulo\">\n\n        <h2 class=\"titulo\">Sobre Dragon Ball Z</h2>\n\n        <p>\n        <strong>Dragon Ball Z</strong> é um anime muito famoso criado por\n        <i>Akira Toriyama</i>. <br> <br>\n\n        A história mostra as aventuras de Goku e seus amigos defendendo a Terra.\n        </p>\n        \n    </section>\n\n\n    <section class=\"section-paulo\">\n        <h2 class=\"titulo\">Personagens</h2>\n\n        <p>\n        <strong>Goku:</strong> Principal guerreiro da sére. <br>\n        <strong>Vegeta:</strong> Rival de Goku e Príncipe Saiyajin. <br>\n        <strong>Gohan:</strong> Filho de Goku\n        </p>\n\n    </section>\n\n\n\n    <section class=\"section-paulo\" id=\"section-tabela-paulo\">\n\n        <h2 class=\"titulo\">Mais sobre a série</h2>\n        \n        <table id=\"tabela-paulo\">\n\n            <tr>\n\n                <td class=\"bordas-separador\">\n                    <h3>Sagas</h3>\n                    <p>Saga Saiyajin, Freeza, Cell e Boo.</p>\n                </td>\n\n\n                <td class=\"bordas-separador\">\n                    <h3>Filmes</h3>\n                    <p>A Batalha dos Deuses e O Renascimento de F.</p>\n                </td>\n\n\n                <td class=\"bordas-separador\">\n                    <h3>Jogos</h3>\n                    <p>Budokai Tenkaichi, Kakarot e FighterZ.</p>\n                </td>\n\n            </tr>\n\n        </table>\n    \n    </section>\n    \n\n    <section class=\"section-paulo\" style=\"margin-top: 20px;\">\n       <h2 class=\"titulo\">Mangá</h2>\n\n        <p>\n        O mangá de Dragon Ball é uma das sagas mais extensas e influentes dos quadrinhos japoneses. Com mais de 40 anos de história, a obra criada por Akira Toriyama começou em 1984 e transformou a indústria mundial de mangás, consolidando-se como a principal referência do gênero shonen em todo o planeta. <br> <br>\n\n        <strong>Link do mangá:</strong> <a href=\"https://projetohqonline.blogspot.com/2018/09/baixar-ou-ler-manga-dragon-ball-1984.html\" target=\"_blank\">https://projetohqonline.blogspot.com/2018/09/baixar-ou-ler-manga-dragon-ball-1984.html</a>\n        </p>\n    </section>\n\n</div>",
+      "ativo": true
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 1,
+    "fields": {
+      "titulo": "GitHub - Felipe",
+      "tipo_destino": "externo",
+      "ordem": 8,
+      "ativo": true,
+      "conteudo": null,
+      "url_externa": "https://github.com/Felipe-dev7"
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 2,
+    "fields": {
+      "titulo": "W3Schools",
+      "tipo_destino": "externo",
+      "ordem": 9,
+      "ativo": true,
+      "conteudo": null,
+      "url_externa": "https://www.w3schools.com/"
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 3,
+    "fields": {
+      "titulo": "Início",
+      "tipo_destino": "interno",
+      "ordem": 1,
+      "ativo": true,
+      "conteudo": 1,
+      "url_externa": ""
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 4,
+    "fields": {
+      "titulo": "Currículo - Felipe",
+      "tipo_destino": "interno",
+      "ordem": 2,
+      "ativo": true,
+      "conteudo": 2,
+      "url_externa": ""
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 5,
+    "fields": {
+      "titulo": "Player Tauz",
+      "tipo_destino": "interno",
+      "ordem": 3,
+      "ativo": true,
+      "conteudo": 3,
+      "url_externa": ""
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 6,
+    "fields": {
+      "titulo": "Currículo - Matheus",
+      "tipo_destino": "interno",
+      "ordem": 4,
+      "ativo": true,
+      "conteudo": 4,
+      "url_externa": ""
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 7,
+    "fields": {
+      "titulo": "Alice in Chains",
+      "tipo_destino": "interno",
+      "ordem": 5,
+      "ativo": true,
+      "conteudo": 5,
+      "url_externa": ""
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 8,
+    "fields": {
+      "titulo": "Currículo - Paulo",
+      "tipo_destino": "interno",
+      "ordem": 6,
+      "ativo": true,
+      "conteudo": 6,
+      "url_externa": ""
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 9,
+    "fields": {
+      "titulo": "Dragon Ball Z",
+      "tipo_destino": "interno",
+      "ordem": 7,
+      "ativo": true,
+      "conteudo": 7,
+      "url_externa": ""
+    }
+  }
+]

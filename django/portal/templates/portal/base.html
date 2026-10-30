@@ -1,0 +1,47 @@
+{% load static %}   <!--* Disponibiliza a biblioteca de tags `static` -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon"
+          href="{% static 'portal/img/trio_devs_favicon.ico' %}"
+          type="image/x-icon">
+
+    <link rel="stylesheet"
+          href="{% static 'portal/css/style.css' %}">
+
+    <title>{% block title %}TRIO DEVS{% endblock %}</title>
+
+</head>
+<body>
+    <div class="pagina">
+        <header id="cabecalho" class="cabecalho-rodape">
+            <h1 id="titulo-cabecalho">
+                {% block header_title %}TRIO DEVS{% endblock %}
+            </h1>
+        </header>
+
+        <main id="menu-conteudo">
+            <nav id="menu" aria-label="Navegação principal">
+                {% block menu %}{% endblock %}
+            </nav>
+
+            <section id="conteudo">
+                {% block content %}{% endblock %}
+            </section>
+        </main>
+
+        <footer id="rodape" class="cabecalho-rodape">
+            <h2>2026</h2>
+        </footer>
+    </div>
+</body>
+</html>
+
+<!--
+    ! Block
+    * O block serve para disponibilizar um espaço para o html filho preencher
+-->

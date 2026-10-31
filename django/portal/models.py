@@ -7,6 +7,11 @@ class Conteudo(models.Model):
     conteudo_html = models.TextField()
     ativo = models.BooleanField(default=True)
 
+
+    class Meta:
+        verbose_name = "Conteúdo"           # nome exibido na página admin
+        verbose_name_plural = "Conteúdos"   # nome exibido na página admin no plural
+
     def __str__(self):
         return self.titulo
 
@@ -40,6 +45,8 @@ class Menu(models.Model):
 
     class Meta:
         ordering = ['ordem']
+        verbose_name = 'Item do Menu'
+        verbose_name_plural = 'Itens do Menu'
 
     def __str__(self):
         return self.titulo

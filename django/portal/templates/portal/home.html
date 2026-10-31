@@ -1,10 +1,19 @@
-{% extends "portal/base.html" %}    <!--* Diz para a página utilizar a estrutura de `base.html` -->
+{% extends "portal/base.html" %}
 {% load static %}
 
-{% block content %}                 <!--* Substitui o bloco `content` -->
-    <section id="capa">
-        <img
-            src="{% static 'portal/img/trio_devs.png' %}"
-            alt="Capa do Trio Devs">
-    </section>
-{% endblock %}
+{% block content %}
+    {{ conteudo.conteudo_html|safe }}
+    {% endblock %}
+
+<!--
+    ! extends "portal/base.html"
+    * Diz para a página utilizar a estrutura de `base.html`
+
+    ! block content
+    * Substitui o bloco `content`
+
+    ! conteudo.conteudo_html|safe
+    * `conteudo` vem do dicionário que cadastramos no views.py
+    * `conteudo_html` retorna um valor do objeto `coteudo` de views.py -> que contém o html da página `inicio`
+    * `|safe` indica ao django que se trata de um html -> para que ele não considere as tags como texto
+-->

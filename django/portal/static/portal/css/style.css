@@ -129,6 +129,18 @@ nav a {
 }
 
 
+@media (max-width: 768px){
+    nav#menu {
+        display: grid;
+        place-items: center;
+
+    }
+
+    nav a {
+        font-size: 16pt;
+    }
+}
+
 /*---------------------------------------*/
 
 
@@ -144,11 +156,13 @@ nav a {
     display: flex;
     align-items: center;
     
-    text-align: center;
-    
-    background-color: #010c16;
-    min-height: 100vh;
-    height: auto;
+    background-image: url('../img/home_fundo.png');
+    background-size: cover;          /* Redimensiona a imagem para cobrir todo o espaço sem distorcer */
+    background-position: center;     /* Mantém o foco principal da imagem no centro ao encolher */
+    background-repeat: no-repeat;    /* Evita que a imagem se duplique */
+
+    width: 100%;                     /* Garante que o elemento ocupe toda a largura */
+    min-height: 100vh;               /* Garante que a altura ocupe toda a tela visível */
 }
 
 

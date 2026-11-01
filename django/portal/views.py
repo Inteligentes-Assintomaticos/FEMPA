@@ -1,5 +1,10 @@
-from django.shortcuts import get_object_or_404, render
-from .models import Conteudo
+from django.shortcuts import get_object_or_404, render, redirect
+from .models import Conteudo, Menu
+
+
+
+def itens_ativos():
+    return Menu.objects.filter(ativo=True).select_related('conteudo')
 
 
 def home(request):
@@ -12,5 +17,30 @@ def home(request):
     return render(
         request,
         "portal/home.html",
-        {"conteudo": conteudo},     #* Atribuição da variável `conteudo` ao nome "conteudo" --> usado posteriormente no template `home.html`
+        {
+            "conteudo": conteudo,
+            'menu': itens_ativos(),
+        },
+    )
+
+
+
+def conteudo(request, slug):
+    if slug == 'inicio':
+        return redirect('portal:Home')
+
+    
+    pagina = get_object_or_404(
+        Conteudo,
+        slug=slug,
+        ativo=True,
+    )
+
+    return render(
+        request,
+        "portal/conteudo.html",
+        {
+            'conteudo': pagina,
+            'menu': itens_ativos(),
+        },
     )

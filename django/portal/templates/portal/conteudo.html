@@ -1,0 +1,9 @@
+{% extends "portal/base.html" %}
+
+{% block title %}{{ conteudo.titulo }}{% endblock %}
+
+{% block header_title %}{{ conteudo.titulo }}{% endblock %}
+
+{% block content %}
+    {{ conteudo.conteudo_html|safe }}
+{% endblock %}

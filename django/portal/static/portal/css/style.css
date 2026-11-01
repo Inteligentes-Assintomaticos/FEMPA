@@ -42,25 +42,6 @@ img {                   /* responsividade de imagem*/
 
 
 
-noscript {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    
-    font-size: 2rem;                /* unidade relativa que se baseia no tamanho da fonte raiz do navegador (<html>) ➡ então mudar a fonte na raiz (<html>) muda a proporção de todos os textos*/
-
-    background-color: #100E09;
-    padding: 30px;
-
-    min-height: 300px;              /* altura padrão para telas maiores ➡ permite aumentar se o conteúdo interno aumentar*/
-}
-
-
-
-
-
-
 /* PÁGINAS */
 .pagina {     
     display: flex;
@@ -182,11 +163,11 @@ nav h2 {
 
 
 /* botões */
-nav button {
+nav a {
     align-self: flex-start;     /* para ocupar apenas o seu espaço*/
 
     font-size: 1.5rem;
-
+    text-decoration: none;
     margin-bottom: 10px;
 
     color: white;

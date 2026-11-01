@@ -26,7 +26,28 @@
 
         <main id="menu-conteudo">
             <nav id="menu" aria-label="Navegação principal">
-                {% block menu %}{% endblock %}
+                {% block menu %}
+                    {% for item in menu %}
+                        {% if item.tipo_destino == "externo" %}
+                            <a
+                                href="{{ item.url_externa }}"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                {{ item.titulo }}
+                            </a>
+                        {% elif item.conteudo.ativo %}
+                            {% if item.conteudo.slug == "inicio" %}
+                                <a href="{% url 'portal:Home' %}">
+                                    {{ item.titulo }}
+                                </a>
+                            {% else %}
+                                <a href="{% url 'portal:conteudo' slug=item.conteudo.slug %}">
+                                    {{ item.titulo }}
+                                </a>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                {% endblock %}
             </nav>
 
             <section id="conteudo">

@@ -9,8 +9,7 @@
     padding: 0;
     box-sizing: border-box;     /* muda a forma como é calculado a largura e altura ➡ incluindo o espaço interno e externo no tamanho definido*/
 
-
-    scrollbar-width: none;      /* scroll invisível*/
+    scrollbar-width: none;
 }
 
 
@@ -18,7 +17,6 @@ body, html {
     background-color: #2f3030;
     color: white;
 
-    overflow-x: hidden;             /* tira o scroll lateral ➡ costuma quebrar muito as páginas*/
 }
 
 
@@ -58,39 +56,13 @@ img {                   /* responsividade de imagem*/
     
     background-color: #1c1c1c;
 
-    margin: auto;
 }
-
-
-#home {
-    width: 95%;
-    margin: 30px auto;
-}
-
-
-/* #curriculo-felipe {
-    
-} */
-
-
-/* #curriculo-matheus {
-
-} */
 
 
 #curriculo-paulo, #goku {
     margin: 0 20px 20px;
 }
 
-
-/* #tauz {
-
-} */
-
-
-#alice-in-chains {
-    margin: 20px 0;
-}
 
 /*---------------------------------------*/
 
@@ -106,13 +78,6 @@ img {                   /* responsividade de imagem*/
     min-height: 100px;
 }
 
-
-
-/* #cabecalho {
-} */
-
-/* #rodape {
-} */
 
 
 /*---------------------------------------*/
@@ -145,28 +110,11 @@ main {
 nav {
     display: flex;
     flex-direction: column;
-    justify-content: left;  /* alinha a esquerda*/
-
-    
     background-color: #292828;
 
     padding-top: 30px;
     padding-left: 20px;
 }
-
-/* títulos */
-nav h2 {
-    width: 90%;
-    
-    font-size: 2rem;
-    font-weight: bold;          /* texto mais gordo ➡ negrito*/
-
-    margin-top: 20px;
-
-    padding-right: 25px;        /* para não "grudar" na borda*/       
-    white-space: nowrap;        /* para não quebrar linha*/
-}    
-
 
 /* botões */
 nav a {
@@ -176,22 +124,8 @@ nav a {
     text-decoration: none;
     margin-bottom: 10px;
 
-    color: white;
     font-weight: bold;
-    
-    background-color: transparent;  /* fundo transparente*/
-    border: none;                   /* remove as bordas*/
-    
-    cursor: pointer;                /* modifica o ponteiro do cursor*/
-
     padding-right: 25px;
-    white-space: nowrap;
-}
-
-
-.borda {
-    border-bottom: 3px solid white;
-    width: 90%;
 }
 
 
@@ -293,11 +227,6 @@ nav a {
 
 
 
-/* cores das linhas */
-
-/* .linha-par {
-} */
-
 .linha-impar {
     background-color: #2e2e2e;
 }
@@ -310,11 +239,9 @@ nav a {
 }
 
 
-/* section tabela */
 #tabela {
     margin: 30px auto;     /* para centralizar verticalmente a tabela*/
     width: 100%;
-
     padding: 0 15px;        /* para não grudar nas bordas*/
 }
 
@@ -333,8 +260,7 @@ nav a {
     #tabela-formacoes,
     #tabela-formacoes tr,
     #tabela-formacoes th,
-    #tabela-formacoes td,
-    #tabela-formacoes .titulo-mobile {
+    #tabela-formacoes td {
 
         display: flex;
         flex-direction: column;
@@ -384,8 +310,6 @@ nav a {
     
     background-color: #100E09;
     padding: 20px;
-    margin-top: auto;
-
     color: inherit;
 }
 
@@ -399,12 +323,13 @@ nav a {
 }
 
 #musica #titulo, #musica #titulo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #100E09;
     
     min-height: 70px;
     text-align: center;
-    align-content: center;
-
     color: inherit;
     width: auto;
 }
@@ -432,10 +357,6 @@ nav a {
 
 
 @media (max-width: 1280px) {
-    #tauz #informacoes_iniciais {
-        flex-direction: column;
-    }
-    
     #letra {
         display: flex;
         flex-direction: column;
@@ -452,20 +373,11 @@ nav a {
 
 /*---------------------------------------*/
 
-/* CURRÍCULO-MATHEUS*/
-
-
-
-
-
-
-
 /*---------------------------------------*/
 
 /* TEMA_LIVRE-MATHEUS */
 
 .history-alice img {
-    height: auto;
     max-width: 600px;
     width: 90%;
 }

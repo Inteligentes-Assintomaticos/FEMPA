@@ -32,6 +32,12 @@ body, html {
 
 a {
     color: white;
+
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #4CCBFE;
 }
 
 
@@ -201,11 +207,16 @@ nav a {
 
 /* página inicial */
 #capa {
+    display: flex;
+    align-items: center;
+    
     text-align: center;
-    align-content: center;
+    
     background-color: #010c16;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 }
+
 
 /*---------------------------------------*/
 
